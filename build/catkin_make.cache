@@ -1,2 +1,2 @@
-
+urdf_model
 -DCATKIN_DEVEL_PREFIX=/home/martin/navigationRobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/martin/navigationRobot_ws/install -G Unix Makefiles

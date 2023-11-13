@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<robot name="my_robot">
+<!-- inertia 是随便改的 -->
+ <!-- material color 轮子蓝色 底座白色 机械臂黑色 爪子红色 -->
+<material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+  <material name="green">
+    <color rgba="0 1 0 1"/>
+  </material>
+
+  <!--  底盘k -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="2 1 0.3"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="2 1 0.5"/> 
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <!-- 四个轮子 -->
+  <!-- Define each wheel link here -->
+  <link name="wheel1">
+    <visual>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+      <origin  rpy = "1.57075 0 0"  xyz = "0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <link name="wheel2">
+    <visual>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+      <origin  rpy = "1.57075 0 0"  xyz = "0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+    <link name="wheel3">
+    <visual>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+      <origin  rpy = "1.57075 0 0"  xyz = "0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+    <link name="wheel4">
+    <visual>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+      <origin  rpy = "1.57075 0 0"  xyz = "0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length = "0.3" radius = "0.3"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+<!-- 轮子的连接 -->
+  <joint name="wheel1_to_base_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel1"/>
+    <origin xyz="0.6 0.5 0"/>
+  </joint>
+
+  <joint name="wheel2_to_base_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel2"/>
+    <origin xyz="-0.6 0.5 0"/>
+  </joint>
+
+  <joint name="wheel3_to_base_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel3"/>
+    <origin xyz="-0.6 -0.5 0"/>
+  </joint>
+
+  <joint name="wheel4_to_base_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="wheel4"/>
+    <origin xyz="0.6 -0.5 0"/>
+  </joint>  
+
+
+  <link name="arm1">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/>
+      </geometry>
+      <origin xyz = "0 0 0.15"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.2" radius="0.2"/>
+      </geometry>
+    </collision>
+    <inertial>
+        <mass value="10"/>
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      </inertial>
+  </link>
+
+
+  <joint name="arm1_base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="arm1"/>
+  </joint>
+
+
+  <link name="arm2">
+    <visual>
+      <geometry>
+        <cylinder length="1.4" radius="0.2"/>
+      </geometry>
+      <origin xyz = "0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="1.4" radius="0.2"/>
+      </geometry>
+    </collision>
+    <inertial>
+        <mass value="10"/>
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      </inertial>
+  </link>
+
+
+
+
+<joint name="arm2_joint" type="revolute">
+  <parent link="arm1"/>
+  <child link="arm2"/>
+  <origin xyz="0 0 0.2" rpy="0 0 0"/> <!-- x y z is the position on arm1 where arm2 rotates -->
+  <axis xyz="1 0 0"/> <!-- Axis of rotation, x-axis in this case -->
+  <limit lower="-1.57" upper="1.57" effort="100.0" velocity="1.0"/>
+</joint>
+
+
+</robot>
+
+
+
