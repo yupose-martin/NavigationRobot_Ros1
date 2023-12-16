@@ -131,7 +131,14 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/martin/navigationRobot_ws/build/gtest/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/car_witharm/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/mbot_navigation/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/mbot_teleop/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/mbot_bringup/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/mbot_gazebo/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/car2_sld/cmake_install.cmake")
   include("/home/martin/navigationRobot_ws/build/urdf_model/cmake_install.cmake")
+  include("/home/martin/navigationRobot_ws/build/mbot_description/cmake_install.cmake")
 
 endif()
 

@@ -1,0 +1,8 @@
+prefix=/home/martin/navigationRobot_ws/install
+
+Name: car2_sld
+Description: Description of car2_sld
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

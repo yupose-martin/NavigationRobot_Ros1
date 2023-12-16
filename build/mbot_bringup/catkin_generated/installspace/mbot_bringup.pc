@@ -1,0 +1,8 @@
+prefix=/home/martin/navigationRobot_ws/install
+
+Name: mbot_bringup
+Description: Description of mbot_bringup
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,2 +1,2 @@
-urdf_model
+car2_sld:car_witharm:mbot_bringup:mbot_description:mbot_gazebo:mbot_navigation:mbot_teleop:urdf_model
 -DCATKIN_DEVEL_PREFIX=/home/martin/navigationRobot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/martin/navigationRobot_ws/install -G Unix Makefiles

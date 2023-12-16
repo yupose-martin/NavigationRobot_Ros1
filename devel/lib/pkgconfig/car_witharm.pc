@@ -1,0 +1,8 @@
+prefix=/home/martin/navigationRobot_ws/devel
+
+Name: car_witharm
+Description: Description of car_witharm
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

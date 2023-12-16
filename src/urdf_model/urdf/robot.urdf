@@ -194,6 +194,10 @@
   <limit lower="-1.57" upper="1.57" effort="100.0" velocity="1.0"/>
 </joint>
 
+<gazebo>
+
+
+
 
 </robot>
 
