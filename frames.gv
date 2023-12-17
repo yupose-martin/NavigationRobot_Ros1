@@ -1,0 +1,12 @@
+digraph G {
+"odom" -> "base_footprint"[label="Broadcaster: /gazebo\nAverage rate: 100.201 Hz\nMost recent transform: 391.037 ( 0.002 sec old)\nBuffer length: 4.970 sec\n"];
+"dummy" -> "wlb_link"[label="Broadcaster: /gazebo\nAverage rate: 100.181 Hz\nMost recent transform: 391.038 ( 0.001 sec old)\nBuffer length: 4.971 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 391.039"[ shape=plaintext ] ;
+ }->"odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 391.039"[ shape=plaintext ] ;
+ }->"dummy";
+}

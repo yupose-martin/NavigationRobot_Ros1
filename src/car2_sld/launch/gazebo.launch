@@ -17,22 +17,21 @@
     </include>
 
 
-  <node
-    name="tf_footprint_base"
-    pkg="tf"
-    type="static_transform_publisher"
-    args="0 0 0 0 0 0 base_link base_footprint 40" />
-  <node
-    name="spawn_model"
-    pkg="gazebo_ros"
-    type="spawn_model"
-    args="-file $(find car2_sld)/urdf/car2_sld.urdf -urdf -model car2_sld"
-    output="screen" />
-  <node
-    name="fake_joint_calibration"
-    pkg="rostopic"
-    type="rostopic"
-    args="pub /calibrated std_msgs/Bool true" />
+    <!-- 加载机器人模型描述参数 -->
+    <param name="robot_description" textfile="$(find car2_sld)/urdf/car2_sld.urdf" />
+
+    <!-- 运行joint_state_publisher节点，发布机器人的关节状态 -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"></node> 
+
+    <!-- 运行robot_state_publisher节点，发布tf -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+        <param name="publish_frequency" type="double" value="50.0" />
+    </node>
+
+    <!-- 在gazebo中加载机器人模型-->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+          args="-urdf -model mbot -param robot_description"/>
+
 
     
 </launch>
