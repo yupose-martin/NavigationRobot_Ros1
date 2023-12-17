@@ -626,10 +626,34 @@
 
   <!-- Camera Joint -->
   <joint name="camera_joint" type="fixed">
-    <parent link="laser_link"/>  <!-- Adjust the parent link as needed -->
+    <parent link="base_link"/>  <!-- Adjust the parent link as needed -->
     <child link="camera_link"/>
-    <origin xyz="0 0 0.015" rpy="0 0 0"/>  <!-- Adjust the position and orientation -->
+    <origin xyz="0 0 0.115" rpy="0 0 0"/>  <!-- Adjust the position and orientation -->
   </joint>
+
+  <!-- Transmission is important to link the joints and the controller -->
+  <transmission name="wlb_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wlb_joint" >
+          <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="wlb_joint_motor">
+          <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+
+  <!-- Transmission is important to link the joints and the controller -->
+  <transmission name="wlb_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wlb_joint_joint" >
+          <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="wlb_joint_joint_motor">
+          <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
 
   <gazebo reference="laser_link">
             <sensor type="ray" name="rplidar">
@@ -713,7 +737,7 @@
           <updateRate>100.0</updateRate>
           <legacyMode>true</legacyMode>
           <leftJoint>wlb_joint</leftJoint>
-          <rightJoint>wlb_joint</rightJoint>
+          <rightJoint>wrb_joint</rightJoint>
           <wheelSeparation>0.29*2</wheelSeparation>
           <wheelDiameter>0.2</wheelDiameter>
           <broadcastTF>1</broadcastTF>
@@ -722,9 +746,12 @@
           <commandTopic>cmd_vel</commandTopic>
           <odometryFrame>odom</odometryFrame> 
           <odometryTopic>odom</odometryTopic> 
-          <robotBaseFrame>base_footprint</robotBaseFrame>
+          <robotBaseFrame>dummy</robotBaseFrame>
       </plugin>
   </gazebo> 
 
+  <gazebo>
+      <self_collide>true</self_collide>
+  </gazebo>
 
 </robot>
