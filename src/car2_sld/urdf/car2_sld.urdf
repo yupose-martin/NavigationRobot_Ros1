@@ -463,7 +463,7 @@
   </link>
   <joint
     name="hand_joint"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 0.37831 0"
       rpy="1.5708 1.5536 3.1416" />
