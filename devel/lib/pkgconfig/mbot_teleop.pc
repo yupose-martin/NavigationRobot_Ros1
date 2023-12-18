@@ -1,8 +1,0 @@
-prefix=/home/martin/navigationRobot_ws/devel
-
-Name: mbot_teleop
-Description: Description of mbot_teleop
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

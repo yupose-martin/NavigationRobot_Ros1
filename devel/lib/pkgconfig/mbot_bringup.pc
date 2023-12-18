@@ -1,8 +1,0 @@
-prefix=/home/martin/navigationRobot_ws/devel
-
-Name: mbot_bringup
-Description: Description of mbot_bringup
-Version: 0.0.0
-Cflags: -I/home/martin/navigationRobot_ws/src/mbot_bringup/include
-Libs: -L${prefix}/lib 
-Requires: 
