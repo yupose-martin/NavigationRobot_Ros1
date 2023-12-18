@@ -1,8 +1,0 @@
-prefix=/home/martin/navigationRobot_ws/install
-
-Name: urdf_model
-Description: Description of urdf_model
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
