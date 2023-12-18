@@ -22,5 +22,5 @@ ros1-navigation robot as project in ROS class
 ## 待解决问题
 
 * 机器人的参数问题。从天空中掉下来，会自行移动，靠墙之后不能够teleop移动，估计惯性太大还是啥？
-* lidar的高度太低，会识别到机器人本身，会造成建图识别错误
+* laser会识别到机械臂（laser已经抬高）
 
