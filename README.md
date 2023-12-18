@@ -30,3 +30,5 @@ ros1-navigation robot as project in ROS class
 * git add . (将自己更新的文件全部加入这个池子)
 * git commit -a -m "你对于此次更新想要说的话"  （-a 是all   -m 是message 在“”里面写入你想要写的信息）（将池子commit）
 * git push (push到远程的repository中)
+
+**测试**
