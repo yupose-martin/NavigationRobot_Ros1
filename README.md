@@ -18,7 +18,10 @@ ros1-navigation robot as project in ROS class
 * 没有动car_witharm(moveit)，后面应该要删除掉，毕竟改了urdf,而且后面需要改参数
 
 #### 12.18
-*增加了laserholder,抬高laser高度
+* 增加了新link：laserholder,抬高laser高度
+* 减小建模重量，gazebo初始化后车不会再乱跑
+
+
 
 ## 待解决问题
 
