@@ -25,7 +25,7 @@ ros1-navigation robot as project in ROS class
 * 机器人的参数问题。从天空中掉下来，会自行移动，靠墙之后不能够teleop移动，估计惯性太大还是啥？
 * laser会识别到机械臂（laser已经抬高）
 
-##怎样上传
+## 怎样上传
 * git pull (从远程repository更新自己的文件，一般先pull)
 * git add . (将自己更新的文件全部加入这个池子)
 * git commit -a -m "你对于此次更新想要说的话"  （-a 是all   -m 是message 在“”里面写入你想要写的信息）（将池子commit）
