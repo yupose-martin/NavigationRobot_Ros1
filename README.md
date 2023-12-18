@@ -5,7 +5,7 @@ ros1-navigation robot as project in ROS class
 ## 跑的流程
 
 * roslaunch car2_sld gazebo.launch
-* roslaunch car2_sld gmapping_demo.launh
+* roslaunch car2_sld gmapping_demo.launch
 * roslaunch car2_sld car2bot_teleop.launch
 
 ## 进度
