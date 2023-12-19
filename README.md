@@ -21,14 +21,13 @@ ros1-navigation robot as project in ROS class
 * 增加了新link：laserholder,抬高laser高度
 * 减小建模重量，gazebo初始化后车不会再乱跑
 
-
-
 ## 待解决问题
 
 * 机器人的参数问题。从天空中掉下来，会自行移动，靠墙之后不能够teleop移动，估计惯性太大还是啥？
-* laser会识别到机械臂（laser已经抬高）
 
-### 使用git
+## 使用git
+
+#### 开始使用git
 
 * sudo apt install git
 * git config --global user.name "用户名"
@@ -39,13 +38,15 @@ ros1-navigation robot as project in ROS class
 * cd navigationRobot_ws && catkin_make
 * 应该就可以使用了
 
-## 怎样上传
+#### 怎样上传
 
 * (在路径～/navigationRobot_ws/进行操作)
-
 * git pull (从远程repository更新自己的文件，一般先pull)
 * git add . (将自己更新的文件全部加入这个池子)
 * git commit -a -m "你对于此次更新想要说的话"  （-a 是all   -m 是message 在“”里面写入你想要写的信息）（将池子commit）
 * git push (push到远程的repository中)
 
-**测试**
+#### 怎样查看commit的更改增减
+
+* git log （可以看到commit记录，附带一个hash码）
+* git show 哈希码 （可以清晰的看到该次commit的+ - ）
