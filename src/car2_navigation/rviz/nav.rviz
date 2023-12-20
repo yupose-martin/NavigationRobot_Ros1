@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /RobotModel1/Links1/base_footprint1
+        - /RobotModel1/Links1/dummy1
         - /Pose Array1
       Splitter Ratio: 0.652661026
     Tree Height: 691
@@ -131,7 +131,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        base_footprint:
+        dummy:
           Alpha: 1
           Show Axes: false
           Show Trail: false

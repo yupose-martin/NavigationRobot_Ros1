@@ -14,7 +14,7 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-2.06493424071167E-16 0.0023469386812806 3.58582616688385E-17"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <mass
       value="1" />
@@ -55,7 +55,7 @@
     <inertial>
       <origin
         xyz="0 0 -0.01"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <mass
         value="0.4" />
       <inertia
@@ -69,7 +69,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wlf_link.STL" />
@@ -83,7 +83,7 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wlf_link.STL" />
@@ -95,20 +95,20 @@
     type="continuous">
     <origin
       xyz="0.325 0.29 -0.02"
-      rpy="1.5708 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="wlf_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
   </joint>
   <link
     name="wlb_link">
     <inertial>
       <origin
-        xyz="5.55111512312578E-17 -3.46944695195361E-18 -0.01"
-        rpy="0 0 0" />
+        xyz="0 0 0"
+        rpy="1.57079633 0 0" />
       <mass
         value="0.4" />
       <inertia
@@ -122,7 +122,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wlb_link.STL" />
@@ -136,7 +136,7 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wlb_link.STL" />
@@ -148,20 +148,20 @@
     type="continuous">
     <origin
       xyz="-0.325 0.29 -0.02"
-      rpy="1.5707963267949 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="wlb_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
   </joint>
   <link
     name="wrf_link">
     <inertial>
       <origin
         xyz="0 0 0.01"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <mass
         value="0.4" />
       <inertia
@@ -175,7 +175,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wrf_link.STL" />
@@ -189,7 +189,7 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wrf_link.STL" />
@@ -201,20 +201,20 @@
     type="continuous">
     <origin
       xyz="0.325 -0.29 -0.02"
-      rpy="1.5708 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="wrf_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
   </joint>
   <link
     name="wrb_link">
     <inertial>
       <origin
         xyz="5.55111512312578E-17 -3.46944695195361E-18 0.01"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <mass
         value="0.4" />
       <inertia
@@ -228,7 +228,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wrb_link.STL" />
@@ -242,7 +242,7 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57079633 0 0" />
       <geometry>
         <mesh
           filename="package://car2_sld/meshes/wrb_link.STL" />
@@ -254,13 +254,13 @@
     type="continuous">
     <origin
       xyz="-0.325 -0.29 -0.02"
-      rpy="1.5707963267949 0 0" />
+      rpy="0 0 0" />
     <parent
       link="base_link" />
     <child
       link="wrb_link" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 1 0" />
   </joint>
   <link
     name="arm1_link">
@@ -660,12 +660,12 @@
   </transmission>
 
   <!-- Transmission is important to link the joints and the controller -->
-  <transmission name="wlb_joint_trans">
+  <transmission name="wrb_joint_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="wlb_joint_joint" >
+      <joint name="wrb_joint_joint" >
           <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       </joint>
-      <actuator name="wlb_joint_joint_motor">
+      <actuator name="wrb_joint_joint_motor">
           <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
           <mechanicalReduction>1</mechanicalReduction>
       </actuator>
@@ -757,8 +757,8 @@
           <wheelSeparation>0.29*2</wheelSeparation>
           <wheelDiameter>0.2</wheelDiameter>
           <broadcastTF>1</broadcastTF>
-          <wheelTorque>30</wheelTorque>
-          <wheelAcceleration>1.8</wheelAcceleration>
+          <wheelTorque>100</wheelTorque>
+          <wheelAcceleration>5</wheelAcceleration>
           <commandTopic>cmd_vel</commandTopic>
           <odometryFrame>odom</odometryFrame> 
           <odometryTopic>odom</odometryTopic> 

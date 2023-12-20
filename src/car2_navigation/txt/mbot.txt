@@ -1,0 +1,177 @@
+1martin@martinComputer:~/navigationRobot_ws$ rostopic list
+na/amcl/parameter_descriptions
+/amcl/parameter_updates
+/amcl_pose
+/clock
+/cmd_vel
+/diagnostics
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/gazebo/performance_metrics
+/gazebo/set_link_state
+/gazebo/set_model_state
+/initialpose
+/joint_states
+/map
+/map_metadata
+/map_updates
+/move_base/NavfnROS/plan
+/move_base/TrajectoryPlannerROS/cost_cloud
+/move_base/TrajectoryPlannerROS/global_plan
+/move_base/TrajectoryPlannerROS/local_plan
+/move_base/TrajectoryPlannerROS/parameter_descriptions
+/move_base/TrajectoryPlannerROS/parameter_updates
+/move_base/cancel
+/move_base/current_goal
+/move_base/feedback
+/move_base/global_costmap/costmap
+/move_base/global_costmap/costmap_updates
+/move_base/global_costmap/footprint
+/move_base/global_costmap/inflation_layer/parameter_descriptions
+/move_base/global_costmap/inflation_layer/parameter_updates
+/move_base/global_costmap/obstacle_layer/parameter_descriptions
+/move_base/global_costmap/obstacle_layer/parameter_updates
+/move_base/global_costmap/parameter_descriptions
+/move_base/global_costmap/parameter_updates
+/move_base/global_costmap/static_layer/parameter_descriptions
+/move_base/global_costmap/static_layer/parameter_updates
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/local_costmap/footprint
+/move_base/local_costmap/inflation_layer/parameter_descriptions
+/move_base/local_costmap/inflation_layer/parameter_updates
+/move_base/local_costmap/obstacle_layer/parameter_descriptions
+/move_base/local_costmap/obstacle_layer/parameter_updates
+/move_base/local_costmap/parameter_descriptions
+/move_base/local_costmap/parameter_updates
+/move_base/local_costmap/static_layer/parameter_descriptions
+/move_base/local_costmap/static_layer/parameter_updates
+/move_base/parameter_descriptions
+/move_base/parameter_updates
+/move_base/recovery_status
+/move_base/result
+/move_base/status
+/move_base_simple/goal
+/odom
+/particlecloud
+/rosout
+/rosout_agg
+/scan
+/tf
+/tf_static
+/waypoint_markers
+/waypoint_markers_array
+
+rviz node info:
+1martin@martinComputer:~/navigationRobot_ws$ rosnode info /rviz
+--------------------------------------------------------------------------------
+Node [/rviz]
+Publications: 
+ * /initialpose [geometry_msgs/PoseWithCovarianceStamped]
+ * /move_base_simple/goal [geometry_msgs/PoseStamped]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /map [nav_msgs/OccupancyGrid]
+ * /map_updates [unknown type]
+ * /move_base/TrajectoryPlannerROS/global_plan [nav_msgs/Path]
+ * /move_base/TrajectoryPlannerROS/local_plan [nav_msgs/Path]
+ * /move_base/local_costmap/costmap [nav_msgs/OccupancyGrid]
+ * /move_base/local_costmap/costmap_updates [map_msgs/OccupancyGridUpdate]
+ * /move_base_simple/goal [geometry_msgs/PoseStamped]
+ * /particlecloud [geometry_msgs/PoseArray]
+ * /scan [sensor_msgs/LaserScan]
+ * /tf [tf2_msgs/TFMessage]
+ * /tf_static [tf2_msgs/TFMessage]
+ * /waypoint_markers [unknown type]
+ * /waypoint_markers_array [unknown type]
+
+Services: 
+ * /rviz/get_loggers
+ * /rviz/load_config
+ * /rviz/load_config_discarding_changes
+ * /rviz/reload_shaders
+ * /rviz/save_config
+ * /rviz/set_logger_level
+
+
+contacting node http://martinComputer:43709/ ...
+Pid: 23126
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound (59059 - 10.26.1.84:54472) [43]
+    * transport: TCPROS
+ * topic: /initialpose
+    * to: /amcl
+    * direction: outbound (59059 - 10.26.1.84:54486) [41]
+    * transport: TCPROS
+ * topic: /move_base_simple/goal
+    * to: /rviz
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /move_base_simple/goal
+    * to: /move_base
+    * direction: outbound (59059 - 10.26.1.84:54492) [23]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://martinComputer:33497/)
+    * direction: inbound (40446 - martinComputer:55543) [38]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /robot_state_publisher (http://martinComputer:45895/)
+    * direction: inbound (57712 - martinComputer:51415) [42]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /gazebo (http://martinComputer:33497/)
+    * direction: inbound (40454 - martinComputer:55543) [46]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl (http://martinComputer:39247/)
+    * direction: inbound (39690 - martinComputer:45195) [50]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /map_odom_broadcaster (http://martinComputer:39617/)
+    * direction: inbound (33668 - martinComputer:54063) [52]
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /robot_state_publisher (http://martinComputer:45895/)
+    * direction: inbound (57726 - martinComputer:51415) [51]
+    * transport: TCPROS
+ * topic: /map
+    * to: /map_server (http://martinComputer:39957/)
+    * direction: inbound (55082 - martinComputer:41113) [40]
+    * transport: TCPROS
+ * topic: /move_base/local_costmap/costmap
+    * to: /move_base (http://martinComputer:44665/)
+    * direction: inbound (55242 - martinComputer:58153) [56]
+    * transport: TCPROS
+ * topic: /move_base/local_costmap/costmap_updates
+    * to: /move_base (http://martinComputer:44665/)
+    * direction: inbound (55260 - martinComputer:58153) [57]
+    * transport: TCPROS
+ * topic: /move_base/TrajectoryPlannerROS/global_plan
+    * to: /move_base (http://martinComputer:44665/)
+    * direction: inbound (55264 - martinComputer:58153) [58]
+    * transport: TCPROS
+ * topic: /move_base/TrajectoryPlannerROS/local_plan
+    * to: /move_base (http://martinComputer:44665/)
+    * direction: inbound (55252 - martinComputer:58153) [44]
+    * transport: TCPROS
+ * topic: /move_base_simple/goal
+    * to: /rviz (http://martinComputer:43709/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /scan
+    * to: /gazebo (http://martinComputer:33497/)
+    * direction: inbound (40456 - martinComputer:55543) [45]
+    * transport: TCPROS
+ * topic: /particlecloud
+    * to: /amcl (http://martinComputer:39247/)
+    * direction: inbound (39698 - martinComputer:45195) [53]
+    * transport: TCPROS
+

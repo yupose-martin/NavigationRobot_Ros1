@@ -1,0 +1,53 @@
+<link
+    name="wlb_link">
+    <inertial>
+      <origin
+        xyz="0 0 -0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.4" />
+      <inertia
+        ixx="0.000589790234763875"
+        ixy="3.94485665153874E-36"
+        ixz="0"
+        iyy="0.000589790234763875"
+        iyz="-4.25822828585374E-37"
+        izz="0.00115226746299744" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car2_sld/meshes/wlb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://car2_sld/meshes/wlb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wlb_joint"
+    type="continuous">
+    <origin
+      xyz="-0.325 0.29 -0.02"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wlb_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>

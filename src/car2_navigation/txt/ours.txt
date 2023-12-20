@@ -1,0 +1,145 @@
+1martin@martinComputer:~/navigationRobot_ws$ rostopic list 
+/amcl/parameter_descriptions
+/amcl/parameter_updates
+/amcl_pose
+/camera/camera_info
+/camera/image_raw
+/camera/image_raw/compressed
+/camera/image_raw/compressed/parameter_descriptions
+/camera/image_raw/compressed/parameter_updates
+/camera/image_raw/compressedDepth
+/camera/image_raw/compressedDepth/parameter_descriptions
+/camera/image_raw/compressedDepth/parameter_updates
+/camera/image_raw/theora
+/camera/image_raw/theora/parameter_descriptions
+/camera/image_raw/theora/parameter_updates
+/camera/parameter_descriptions
+/camera/parameter_updates
+/clock
+/cmd_vel
+/diagnostics
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/gazebo/performance_metrics
+/gazebo/set_link_state
+/gazebo/set_model_state
+/initialpose
+/joint_states
+/map
+/map_metadata
+/map_updates
+/move_base/TrajectoryPlannerROS/global_plan
+/move_base/TrajectoryPlannerROS/local_plan
+/move_base/current_goal
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/recovery_status
+/move_base_simple/goal
+/odom
+/particlecloud
+/rosout
+/rosout_agg
+/scan
+/tf
+/tf_static
+/waypoint_markers
+/waypoint_markers_array
+
+
+rviz node info:
+1martin@martinComputer:~/navigationRobot_ws$ rosnode info /rviz 
+--------------------------------------------------------------------------------
+Node [/rviz]
+Publications: 
+ * /initialpose [geometry_msgs/PoseWithCovarianceStamped]
+ * /move_base_simple/goal [geometry_msgs/PoseStamped]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /map [nav_msgs/OccupancyGrid]
+ * /map_updates [unknown type]
+ * /move_base/TrajectoryPlannerROS/global_plan [unknown type]
+ * /move_base/TrajectoryPlannerROS/local_plan [unknown type]
+ * /move_base/local_costmap/costmap [unknown type]
+ * /move_base/local_costmap/costmap_updates [unknown type]
+ * /move_base_simple/goal [geometry_msgs/PoseStamped]
+ * /particlecloud [geometry_msgs/PoseArray]
+ * /scan [sensor_msgs/LaserScan]
+ * /tf [tf2_msgs/TFMessage]
+ * /tf_static [tf2_msgs/TFMessage]
+ * /waypoint_markers [unknown type]
+ * /waypoint_markers_array [unknown type]
+
+Services: 
+ * /rviz/get_loggers
+ * /rviz/load_config
+ * /rviz/load_config_discarding_changes
+ * /rviz/reload_shaders
+ * /rviz/save_config
+ * /rviz/set_logger_level
+
+
+contacting node http://martinComputer:35077/ ...
+Pid: 21615
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound (39599 - 10.26.1.84:47642) [28]
+    * transport: TCPROS
+ * topic: /initialpose
+    * to: /amcl
+    * direction: outbound (39599 - 10.26.1.84:47662) [23]
+    * transport: TCPROS
+ * topic: /move_base_simple/goal
+    * to: /rviz
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /move_base_simple/goal
+    * to: /move_base
+    * direction: outbound (39599 - 10.26.1.84:47650) [40]
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://martinComputer:44677/)
+    * direction: inbound (33848 - martinComputer:50717) [38]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /robot_state_publisher (http://martinComputer:40741/)
+    * direction: inbound (59626 - martinComputer:52999) [47]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /gazebo (http://martinComputer:44677/)
+    * direction: inbound (33894 - martinComputer:50717) [48]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl (http://martinComputer:37727/)
+    * direction: inbound (46348 - martinComputer:50749) [52]
+    * transport: TCPROS
+ * topic: /tf
+    * to: /map_odom_broadcaster (http://martinComputer:43229/)
+    * direction: inbound (53758 - martinComputer:52021) [53]
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /robot_state_publisher (http://martinComputer:40741/)
+    * direction: inbound (59636 - martinComputer:52999) [50]
+    * transport: TCPROS
+ * topic: /map
+    * to: /map_server (http://martinComputer:37525/)
+    * direction: inbound (58362 - martinComputer:46123) [54]
+    * transport: TCPROS
+ * topic: /move_base_simple/goal
+    * to: /rviz (http://martinComputer:35077/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /scan
+    * to: /gazebo (http://martinComputer:44677/)
+    * direction: inbound (33908 - martinComputer:50717) [55]
+    * transport: TCPROS
+ * topic: /particlecloud
+    * to: /amcl (http://martinComputer:37727/)
+    * direction: inbound (46356 - martinComputer:50749) [56]
+    * transport: TCPROS
+
