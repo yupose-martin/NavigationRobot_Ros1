@@ -6,6 +6,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/car2_sld.srdf
   CONFIG:
-    author_name: erth
-    author_email: reth@13w.com
-    generated_timestamp: 1702372794
+    author_name: martin
+    author_email: martin0248159@gmail.com
+    generated_timestamp: 1703595278

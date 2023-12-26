@@ -31,6 +31,10 @@
         <joint name="arm3_joint" value="-1.7942"/>
         <joint name="hand_joint" value="0"/>
     </group_state>
+    <group_state name="grasp" group="gripper">
+        <joint name="finger1_joint" value="-0.05"/>
+        <joint name="finger2_joint" value="0.05"/>
+    </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="robot_gripper" parent_link="grasping_frame" group="gripper"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->

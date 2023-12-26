@@ -1,0 +1,23 @@
+car2_sld:
+  arm_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - arm1_joint
+      - arm2_joint
+      - arm3_joint
+
+    gains:
+      arm1_joint:   {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      arm2_joint:   {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+      arm3_joint:   {p: 1000.0, i: 0.0, d: 0.1, i_clamp: 0.0}
+
+
+  gripper_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - finger1_joint
+      - finger2_joint
+    gains:
+      finger1_joint:  {p: 50.0, d: 1.0, i: 0.01, i_clamp: 1.0}
+      finger2_joint:  {p: 50.0, d: 1.0, i: 0.01, i_clamp: 1.0}
+

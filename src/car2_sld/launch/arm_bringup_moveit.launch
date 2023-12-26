@@ -1,0 +1,15 @@
+<launch>
+  
+    <!-- Launch Gazebo  -->
+    <include file="$(find car2_sld)/launch/arm_world.launch" />
+
+    <!-- ros_control arm launch file -->
+    <include file="$(find car2_sld)/launch/arm_gazebo_states.launch" />   
+
+    <!-- ros_control trajectory control dof arm launch file -->
+    <include file="$(find car2_sld)/launch/arm_trajectory_controller.launch" />
+
+    <!-- moveit launch file -->
+    <include file="$(find car_witharm)/launch/moveit_planning_execution.launch" />
+
+</launch>
