@@ -1,61 +1,52 @@
-1martin@martinComputer:~$ roslaunch marm_gazebo arm_bringup_moveit.launch 
-... logging to /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/roslaunch-martinComputer-32700.log
+1martin@martinComputer:~$ roslaunch car2_sld car2_sld_bringup_moveit.launch 
+... logging to /home/martin/.ros/log/b29d1ca8-a460-11ee-965b-a7677b6c9e0e/roslaunch-martinComputer-14504.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
 
-xacro: in-order processing became default in ROS Melodic. You can drop the option.
-started roslaunch server http://martinComputer:39343/
+started roslaunch server http://martinComputer:43271/
 
 SUMMARY
 ========
 
 PARAMETERS
- * /arm/arm_joint_controller/gains/joint1/d: 0.1
- * /arm/arm_joint_controller/gains/joint1/i: 0.0
- * /arm/arm_joint_controller/gains/joint1/i_clamp: 0.0
- * /arm/arm_joint_controller/gains/joint1/p: 1000.0
- * /arm/arm_joint_controller/gains/joint2/d: 0.1
- * /arm/arm_joint_controller/gains/joint2/i: 0.0
- * /arm/arm_joint_controller/gains/joint2/i_clamp: 0.0
- * /arm/arm_joint_controller/gains/joint2/p: 1000.0
- * /arm/arm_joint_controller/gains/joint3/d: 0.1
- * /arm/arm_joint_controller/gains/joint3/i: 0.0
- * /arm/arm_joint_controller/gains/joint3/i_clamp: 0.0
- * /arm/arm_joint_controller/gains/joint3/p: 1000.0
- * /arm/arm_joint_controller/gains/joint4/d: 0.1
- * /arm/arm_joint_controller/gains/joint4/i: 0.0
- * /arm/arm_joint_controller/gains/joint4/i_clamp: 0.0
- * /arm/arm_joint_controller/gains/joint4/p: 1000.0
- * /arm/arm_joint_controller/gains/joint5/d: 0.1
- * /arm/arm_joint_controller/gains/joint5/i: 0.0
- * /arm/arm_joint_controller/gains/joint5/i_clamp: 0.0
- * /arm/arm_joint_controller/gains/joint5/p: 1000.0
- * /arm/arm_joint_controller/gains/joint6/d: 0.1
- * /arm/arm_joint_controller/gains/joint6/i: 0.0
- * /arm/arm_joint_controller/gains/joint6/i_clamp: 0.0
- * /arm/arm_joint_controller/gains/joint6/p: 1000.0
- * /arm/arm_joint_controller/joints: ['joint1', 'joint...
- * /arm/arm_joint_controller/type: position_controll...
- * /arm/gripper_controller/gains/finger_joint1/d: 1.0
- * /arm/gripper_controller/gains/finger_joint1/i: 0.01
- * /arm/gripper_controller/gains/finger_joint1/i_clamp: 1.0
- * /arm/gripper_controller/gains/finger_joint1/p: 50.0
- * /arm/gripper_controller/joints: ['finger_joint1']
- * /arm/gripper_controller/type: position_controll...
- * /arm/joint_state_controller/publish_rate: 50
- * /arm/joint_state_controller/type: joint_state_contr...
+ * /car2_sld/arm_controller/gains/arm1_joint/d: 0.1
+ * /car2_sld/arm_controller/gains/arm1_joint/i: 0.0
+ * /car2_sld/arm_controller/gains/arm1_joint/i_clamp: 0.0
+ * /car2_sld/arm_controller/gains/arm1_joint/p: 1000.0
+ * /car2_sld/arm_controller/gains/arm2_joint/d: 0.1
+ * /car2_sld/arm_controller/gains/arm2_joint/i: 0.0
+ * /car2_sld/arm_controller/gains/arm2_joint/i_clamp: 0.0
+ * /car2_sld/arm_controller/gains/arm2_joint/p: 1000.0
+ * /car2_sld/arm_controller/gains/arm3_joint/d: 0.1
+ * /car2_sld/arm_controller/gains/arm3_joint/i: 0.0
+ * /car2_sld/arm_controller/gains/arm3_joint/i_clamp: 0.0
+ * /car2_sld/arm_controller/gains/arm3_joint/p: 1000.0
+ * /car2_sld/arm_controller/joints: ['arm1_joint', 'a...
+ * /car2_sld/arm_controller/type: position_controll...
+ * /car2_sld/gripper_controller/gains/finger1_joint/d: 1.0
+ * /car2_sld/gripper_controller/gains/finger1_joint/i: 0.01
+ * /car2_sld/gripper_controller/gains/finger1_joint/i_clamp: 1.0
+ * /car2_sld/gripper_controller/gains/finger1_joint/p: 50.0
+ * /car2_sld/gripper_controller/gains/finger2_joint/d: 1.0
+ * /car2_sld/gripper_controller/gains/finger2_joint/i: 0.01
+ * /car2_sld/gripper_controller/gains/finger2_joint/i_clamp: 1.0
+ * /car2_sld/gripper_controller/gains/finger2_joint/p: 50.0
+ * /car2_sld/gripper_controller/joints: ['finger1_joint',...
+ * /car2_sld/gripper_controller/type: position_controll...
+ * /car2_sld/joint_state_controller/publish_rate: 50
+ * /car2_sld/joint_state_controller/type: joint_state_contr...
  * /gazebo/enable_ros_network: True
  * /joint_state_publisher/use_gui: False
  * /move_group/allow_trajectory_execution: True
  * /move_group/capabilities: 
- * /move_group/controller_list: [{'name': 'arm/ar...
+ * /move_group/controller_list: [{'name': 'car2_s...
  * /move_group/controller_manager_ns: controller_manager
  * /move_group/default_planning_pipeline: ompl
  * /move_group/disable_capabilities: 
  * /move_group/max_range: 5.0
  * /move_group/monitor_dynamics: False
- * /move_group/moveit_controller_manager: moveit_simple_con...
+ * /move_group/moveit_controller_manager: car2_sld
  * /move_group/moveit_manage_controllers: True
  * /move_group/octomap_resolution: 0.025
  * /move_group/planning_pipelines/chomp/collision_clearance: 0.2
@@ -82,8 +73,10 @@ PARAMETERS
  * /move_group/planning_pipelines/chomp/use_stochastic_descent: True
  * /move_group/planning_pipelines/ompl/arm/longest_valid_segment_fraction: 0.005
  * /move_group/planning_pipelines/ompl/arm/planner_configs: ['AnytimePathShor...
- * /move_group/planning_pipelines/ompl/arm/projection_evaluator: joints(joint1,joi...
+ * /move_group/planning_pipelines/ompl/arm/projection_evaluator: joints(arm1_joint...
+ * /move_group/planning_pipelines/ompl/gripper/longest_valid_segment_fraction: 0.005
  * /move_group/planning_pipelines/ompl/gripper/planner_configs: ['AnytimePathShor...
+ * /move_group/planning_pipelines/ompl/gripper/projection_evaluator: joints(finger1_jo...
  * /move_group/planning_pipelines/ompl/jiggle_fraction: 0.05
  * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/delay_rewiring_to_first_solution: 0
  * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/drop_unconnected_samples_on_prune: 0
@@ -235,7 +228,7 @@ PARAMETERS
  * /move_group/planning_scene_monitor/publish_state_updates: True
  * /move_group/planning_scene_monitor/publish_transforms_updates: True
  * /move_group/sense_for_plan/max_safe_path_cost: 1
- * /move_group/sensors: []
+ * /move_group/sensors: [{'filtered_cloud...
  * /move_group/trajectory_execution/allowed_execution_duration_scaling: 1.2
  * /move_group/trajectory_execution/allowed_goal_duration_margin: 0.5
  * /move_group/trajectory_execution/allowed_start_tolerance: 0.01
@@ -252,38 +245,30 @@ PARAMETERS
  * /robot_description_planning/cartesian_limits/max_trans_vel: 1
  * /robot_description_planning/default_acceleration_scaling_factor: 0.1
  * /robot_description_planning/default_velocity_scaling_factor: 0.1
- * /robot_description_planning/joint_limits/finger_joint1/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/finger_joint1/has_velocity_limits: True
- * /robot_description_planning/joint_limits/finger_joint1/max_acceleration: 0
- * /robot_description_planning/joint_limits/finger_joint1/max_velocity: 1
- * /robot_description_planning/joint_limits/joint1/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/joint1/has_velocity_limits: True
- * /robot_description_planning/joint_limits/joint1/max_acceleration: 0
- * /robot_description_planning/joint_limits/joint1/max_velocity: 1
- * /robot_description_planning/joint_limits/joint2/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/joint2/has_velocity_limits: True
- * /robot_description_planning/joint_limits/joint2/max_acceleration: 0
- * /robot_description_planning/joint_limits/joint2/max_velocity: 1
- * /robot_description_planning/joint_limits/joint3/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/joint3/has_velocity_limits: True
- * /robot_description_planning/joint_limits/joint3/max_acceleration: 0
- * /robot_description_planning/joint_limits/joint3/max_velocity: 1
- * /robot_description_planning/joint_limits/joint4/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/joint4/has_velocity_limits: True
- * /robot_description_planning/joint_limits/joint4/max_acceleration: 0
- * /robot_description_planning/joint_limits/joint4/max_velocity: 1
- * /robot_description_planning/joint_limits/joint5/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/joint5/has_velocity_limits: True
- * /robot_description_planning/joint_limits/joint5/max_acceleration: 0
- * /robot_description_planning/joint_limits/joint5/max_velocity: 1
- * /robot_description_planning/joint_limits/joint6/has_acceleration_limits: False
- * /robot_description_planning/joint_limits/joint6/has_velocity_limits: True
- * /robot_description_planning/joint_limits/joint6/max_acceleration: 0
- * /robot_description_planning/joint_limits/joint6/max_velocity: 1
+ * /robot_description_planning/joint_limits/arm1_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/arm1_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/arm1_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/arm1_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/arm2_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/arm2_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/arm2_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/arm2_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/arm3_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/arm3_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/arm3_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/arm3_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/finger1_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/finger1_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/finger1_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/finger1_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/finger2_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/finger2_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/finger2_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/finger2_joint/max_velocity: 0
  * /robot_description_semantic: <?xml version="1....
  * /rosdistro: noetic
  * /rosversion: 1.16.0
- * /source_list: ['/arm/joint_stat...
+ * /source_list: ['/car2_sld/joint...
  * /use_sim_time: True
 
 NODES
@@ -293,123 +278,95 @@ NODES
     joint_state_publisher (joint_state_publisher/joint_state_publisher)
     move_group (moveit_ros_move_group/move_group)
     robot_state_publisher (robot_state_publisher/robot_state_publisher)
-    rviz_martinComputer_32700_332606658748800578 (rviz/rviz)
+    rviz_martinComputer_14504_843480316805781736 (rviz/rviz)
     urdf_spawner (gazebo_ros/spawn_model)
-  /arm/
-    arm_controller_spawner (controller_manager/spawner)
+  /car2_sld/
+    car2_sld_controller_spawner (controller_manager/spawner)
     joint_controller_spawner (controller_manager/spawner)
 
+auto-starting new master
+process[master]: started with pid [14512]
 ROS_MASTER_URI=http://localhost:11311
 
-process[gazebo-1]: started with pid [32726]
-process[gazebo_gui-2]: started with pid [32730]
-process[urdf_spawner-3]: started with pid [32735]
-process[arm/joint_controller_spawner-4]: started with pid [32737]
-process[robot_state_publisher-5]: started with pid [32738]
-process[arm/arm_controller_spawner-6]: started with pid [32739]
-process[move_group-7]: started with pid [32740]
-process[rviz_martinComputer_32700_332606658748800578-8]: started with pid [32741]
-process[joint_state_publisher-9]: started with pid [32746]
-[ INFO] [1703645997.124788366]: Loading robot model 'arm'...
-[ INFO] [1703645997.126765446]: No root/virtual joint specified in SRDF. Assuming fixed joint
-[ WARN] [1703645997.127060538]: Link gripper_finger_link1 has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
-[ WARN] [1703645997.127099581]: Link gripper_finger_link2 has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
-[ INFO] [1703645997.216899120]: Publishing maintained planning scene on 'monitored_planning_scene'
-[ INFO] [1703645997.218800698]: Listening to 'joint_states' for joint states
-[ INFO] [1703645997.221608505]: Listening to '/attached_collision_object' for attached collision objects
-[ INFO] [1703645997.221652088]: Starting planning scene monitor
-[ INFO] [1703645997.222960410]: Listening to '/planning_scene'
-[ INFO] [1703645997.222992887]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
-[ INFO] [1703645997.224069326]: Listening to '/collision_object'
-[ INFO] [1703645997.225250182]: Listening to '/planning_scene_world' for planning scene world geometry
-[ INFO] [1703645997.226289115]: Loading planning pipeline 'chomp'
-[ INFO] [1703645997.251124459]: Using planning interface 'CHOMP'
-[ INFO] [1703645997.254477121]: Param 'default_workspace_bounds' was not set. Using default value: 10
-[ INFO] [1703645997.254809998]: Param 'start_state_max_bounds_error' was set to 0.1
-[ INFO] [1703645997.255115217]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.255392429]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.255688638]: Param 'jiggle_fraction' was set to 0.05
-[ INFO] [1703645997.255990086]: Param 'max_sampling_attempts' was not set. Using default value: 100
-[ INFO] [1703645997.256038488]: Using planning request adapter 'Limiting Max Cartesian Speed'
-[ INFO] [1703645997.256058463]: Using planning request adapter 'Add Time Parameterization'
-[ INFO] [1703645997.256075366]: Using planning request adapter 'Resolve constraint frames to robot links'
-[ INFO] [1703645997.256091709]: Using planning request adapter 'Fix Workspace Bounds'
-[ INFO] [1703645997.256106377]: Using planning request adapter 'Fix Start State Bounds'
-[ INFO] [1703645997.256119856]: Using planning request adapter 'Fix Start State In Collision'
-[ INFO] [1703645997.256134035]: Using planning request adapter 'Fix Start State Path Constraints'
-[ INFO] [1703645997.256931097]: Loading planning pipeline 'ompl'
-[ INFO] [1703645997.265417518]: rviz version 1.14.20
-[ INFO] [1703645997.265464383]: compiled against Qt version 5.12.8
-[ INFO] [1703645997.265479539]: compiled against OGRE version 1.9.0 (Ghadamon)
-[ INFO] [1703645997.275939408]: Forcing OpenGl version 0.
-[INFO] [1703645997.290512, 0.000000]: Loading model XML from ros parameter robot_description
-[INFO] [1703645997.294528, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
-[ INFO] [1703645997.310588283]: Using planning interface 'OMPL'
-[ INFO] [1703645997.311954156]: Param 'default_workspace_bounds' was not set. Using default value: 10
-[ INFO] [1703645997.312178356]: Param 'start_state_max_bounds_error' was set to 0.1
-[ INFO] [1703645997.312403604]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.312630248]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.312873236]: Param 'jiggle_fraction' was set to 0.05
-[ INFO] [1703645997.313083467]: Param 'max_sampling_attempts' was not set. Using default value: 100
-[ INFO] [1703645997.313110427]: Using planning request adapter 'Limiting Max Cartesian Speed'
-[ INFO] [1703645997.313120485]: Using planning request adapter 'Add Time Parameterization'
-[ INFO] [1703645997.313131380]: Using planning request adapter 'Resolve constraint frames to robot links'
-[ INFO] [1703645997.313139971]: Using planning request adapter 'Fix Workspace Bounds'
-[ INFO] [1703645997.313148632]: Using planning request adapter 'Fix Start State Bounds'
-[ INFO] [1703645997.313157153]: Using planning request adapter 'Fix Start State In Collision'
-[ INFO] [1703645997.313165674]: Using planning request adapter 'Fix Start State Path Constraints'
-[ INFO] [1703645997.313194799]: Loading planning pipeline 'pilz_industrial_motion_planner'
-[ INFO] [1703645997.315165244]: Reading limits from namespace /robot_description_planning
-[ INFO] [1703645997.328970580]: Available plugins: pilz_industrial_motion_planner::PlanningContextLoaderCIRC pilz_industrial_motion_planner::PlanningContextLoaderLIN pilz_industrial_motion_planner::PlanningContextLoaderPTP 
-[ INFO] [1703645997.329001102]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderCIRC
-[ INFO] [1703645997.330121543]: Registered Algorithm [CIRC]
-[ INFO] [1703645997.330138376]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderLIN
-[ INFO] [1703645997.330969242]: Registered Algorithm [LIN]
-[ INFO] [1703645997.330985306]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderPTP
-[ INFO] [1703645997.331786839]: Registered Algorithm [PTP]
-[ INFO] [1703645997.331802693]: Using planning interface 'Pilz Industrial Motion Planner'
-[INFO] [1703645997.394192, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[INFO] [1703645997.407686, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[ INFO] [1703645997.503800416]: Stereo is NOT SUPPORTED
-[ INFO] [1703645997.503865301]: OpenGL device: AMD RENOIR (DRM 3.42.0, 5.15.0-91-generic, LLVM 12.0.0)
-[ INFO] [1703645997.503885277]: OpenGl version: 4.6 (GLSL 4.6) limited to GLSL 1.4 on Mesa system.
-[ INFO] [1703645997.655802161]: Finished loading Gazebo ROS API Plugin.
-[ INFO] [1703645997.656958851]: waitForService: Service [/gazebo_gui/set_physics_properties] has not been advertised, waiting...
-[ INFO] [1703645997.691148290]: Finished loading Gazebo ROS API Plugin.
-[ INFO] [1703645997.692249873]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
-[ INFO] [1703645998.069173362]: waitForService: Service [/gazebo/set_physics_properties] is now available.
-[ INFO] [1703645998.112422357, 0.035000000]: Physics dynamic reconfigure ready.
-[INFO] [1703645998.264806, 0.180000]: Calling service /gazebo/spawn_urdf_model
-[INFO] [1703645998.502186, 0.354000]: Spawn status: SpawnModel: Successfully spawned entity
-[ INFO] [1703645998.514509405, 0.354000000]: Loading gazebo_ros_control plugin
-[ INFO] [1703645998.514579459, 0.354000000]: Starting gazebo_ros_control plugin in namespace: /arm
-[ INFO] [1703645998.514931403, 0.354000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.
-[ERROR] [1703645998.625482059, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint1
-[ERROR] [1703645998.626139922, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint2
-[ERROR] [1703645998.626751757, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint3
-[ERROR] [1703645998.627362475, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint4
-[ERROR] [1703645998.627984018, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint5
-[ERROR] [1703645998.628626585, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint6
-[ERROR] [1703645998.629269012, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/finger_joint1
-[ INFO] [1703645998.636689539, 0.354000000]: Loaded gazebo_ros_control.
-[INFO] [1703645998.905317, 0.624000]: Controller Spawner: Waiting for service controller_manager/switch_controller
-[INFO] [1703645998.911129, 0.630000]: Controller Spawner: Waiting for service controller_manager/unload_controller
-[INFO] [1703645998.916756, 0.635000]: Loading controller: arm_joint_controller
-[INFO] [1703645998.920436, 0.639000]: Controller Spawner: Waiting for service controller_manager/switch_controller
-[INFO] [1703645998.926061, 0.645000]: Controller Spawner: Waiting for service controller_manager/unload_controller
-[INFO] [1703645998.931622, 0.650000]: Loading controller: joint_state_controller
-[INFO] [1703645998.957940, 0.677000]: Loading controller: gripper_controller
-[INFO] [1703645998.963268, 0.682000]: Controller Spawner: Loaded controllers: joint_state_controller
-[INFO] [1703645998.975952, 0.695000]: Controller Spawner: Loaded controllers: arm_joint_controller, gripper_controller
-[INFO] [1703645998.982877, 0.701000]: Started controllers: joint_state_controller
-[INFO] [1703645998.983983, 0.703000]: Started controllers: arm_joint_controller, gripper_controller
-[urdf_spawner-3] process has finished cleanly
-log file: /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/urdf_spawner-3*.log
-[ INFO] [1703645999.184666634, 0.903000000]: Added FollowJointTrajectory controller for arm/arm_joint_controller
-[ INFO] [1703645999.698283823, 1.411000000]: Added FollowJointTrajectory controller for arm/gripper_controller
-[ INFO] [1703645999.698363166, 1.411000000]: Returned 2 controllers in list
-[ INFO] [1703645999.707672838, 1.421000000]: Trajectory execution is managing controllers
-[ INFO] [1703645999.707720541, 1.421000000]: MoveGroup debug mode is OFF
+setting /run_id to b29d1ca8-a460-11ee-965b-a7677b6c9e0e
+process[rosout-1]: started with pid [14524]
+started core service [/rosout]
+process[gazebo-2]: started with pid [14531]
+process[gazebo_gui-3]: started with pid [14535]
+process[urdf_spawner-4]: started with pid [14540]
+process[car2_sld/joint_controller_spawner-5]: started with pid [14542]
+process[robot_state_publisher-6]: started with pid [14543]
+process[car2_sld/car2_sld_controller_spawner-7]: started with pid [14544]
+process[move_group-8]: started with pid [14545]
+process[rviz_martinComputer_14504_843480316805781736-9]: started with pid [14546]
+process[joint_state_publisher-10]: started with pid [14552]
+[ INFO] [1703644572.454531485]: Loading robot model 'car2_sld'...
+[ INFO] [1703644572.455522537]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[ WARN] [1703644572.514278492]: Link camera_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ WARN] [1703644572.514338337]: Link laser_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ WARN] [1703644572.514358589]: Link laserholder_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ERROR] [1703644572.515991814]: The model for joint 'hand_joint' requires 0 variable values, but only 1 variable values were supplied in default state 'home' for group 'arm'
+[ERROR] [1703644572.516049076]: The model for joint 'hand_joint' requires 0 variable values, but only 1 variable values were supplied in default state 'up' for group 'arm'
+[ INFO] [1703644572.566033463]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ INFO] [1703644572.567902510]: Listening to 'joint_states' for joint states
+[ INFO] [1703644572.571168821]: Listening to '/attached_collision_object' for attached collision objects
+[ INFO] [1703644572.571210790]: Starting planning scene monitor
+[ INFO] [1703644572.572705957]: Listening to '/planning_scene'
+[ INFO] [1703644572.572744574]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[ INFO] [1703644572.574329686]: Listening to '/collision_object'
+[ INFO] [1703644572.575892031]: Listening to '/planning_scene_world' for planning scene world geometry
+[INFO] [1703644572.591856, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[ INFO] [1703644572.593405697]: rviz version 1.14.20
+[ INFO] [1703644572.593466800]: compiled against Qt version 5.12.8
+[ INFO] [1703644572.593479929]: compiled against OGRE version 1.9.0 (Ghadamon)
+[ INFO] [1703644572.595764894]: Listening to '/head_mount_kinect/depth_registered/points' using message filter with target frame 'dummy '
+[ INFO] [1703644572.595830745]: Loading planning pipeline 'chomp'
+[ INFO] [1703644572.605778209]: Forcing OpenGl version 0.
+[ INFO] [1703644572.622109414]: Using planning interface 'CHOMP'
+[ INFO] [1703644572.624813649]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1703644572.625140043]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1703644572.625451283]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703644572.625845343]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703644572.626170131]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1703644572.626574596]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1703644572.626633255]: Using planning request adapter 'Limiting Max Cartesian Speed'
+[ INFO] [1703644572.626677738]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1703644572.626706718]: Using planning request adapter 'Resolve constraint frames to robot links'
+[ INFO] [1703644572.626732905]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1703644572.626759092]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1703644572.626784441]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1703644572.626809091]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1703644572.627651053]: Loading planning pipeline 'ompl'
+[ INFO] [1703644572.678448072]: Using planning interface 'OMPL'
+[ INFO] [1703644572.679963002]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1703644572.680310695]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1703644572.680637298]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703644572.680991135]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703644572.681318786]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1703644572.681639384]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1703644572.681683308]: Using planning request adapter 'Limiting Max Cartesian Speed'
+[ INFO] [1703644572.681700277]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1703644572.681717037]: Using planning request adapter 'Resolve constraint frames to robot links'
+[ INFO] [1703644572.681732609]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1703644572.681745598]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1703644572.681759355]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1703644572.681773740]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1703644572.681819480]: Loading planning pipeline 'pilz_industrial_motion_planner'
+[ INFO] [1703644572.684349554]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703644572.698751726]: Available plugins: pilz_industrial_motion_planner::PlanningContextLoaderCIRC pilz_industrial_motion_planner::PlanningContextLoaderLIN pilz_industrial_motion_planner::PlanningContextLoaderPTP 
+[ INFO] [1703644572.698803821]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderCIRC
+[ INFO] [1703644572.700377130]: Registered Algorithm [CIRC]
+[ INFO] [1703644572.700397312]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderLIN
+[ INFO] [1703644572.701480542]: Registered Algorithm [LIN]
+[ INFO] [1703644572.701498489]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderPTP
+[ INFO] [1703644572.702499806]: Registered Algorithm [PTP]
+[ INFO] [1703644572.702522153]: Using planning interface 'Pilz Industrial Motion Planner'
+[FATAL] [1703644572.704825274]: Exception while loading controller manager 'car2_sld': According to the loaded plugin descriptions the class car2_sld with base class type moveit_controller_manager::MoveItControllerManager does not exist. Declared types are  moveit_fake_controller_manager/MoveItFakeControllerManager moveit_ros_control_interface::MoveItControllerManager moveit_ros_control_interface::MoveItMultiControllerManager moveit_simple_controller_manager/MoveItSimpleControllerManager
+[ INFO] [1703644572.716101008]: Trajectory execution is managing controllers
+[ INFO] [1703644572.716163997]: MoveGroup debug mode is OFF
+[INFO] [1703644572.716567, 0.000000]: Loading model XML from ros parameter robot_description
+[INFO] [1703644572.721470, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1703644572.722943, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
 Loading 'move_group/ApplyPlanningSceneService'...
 Loading 'move_group/ClearOctomapService'...
 Loading 'move_group/MoveGroupCartesianPathService'...
@@ -422,11 +379,11 @@ Loading 'move_group/MoveGroupPlanService'...
 Loading 'move_group/MoveGroupQueryPlannersService'...
 Loading 'move_group/MoveGroupStateValidationService'...
 Loading 'pilz_industrial_motion_planner/MoveGroupSequenceAction'...
-[ INFO] [1703645999.758017576, 1.472000000]: initialize move group sequence action
-[ INFO] [1703645999.762824114, 1.476000000]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703644572.757506564]: initialize move group sequence action
+[ INFO] [1703644572.764260272]: Reading limits from namespace /robot_description_planning
 Loading 'pilz_industrial_motion_planner/MoveGroupSequenceService'...
-[ INFO] [1703645999.781978254, 1.496000000]: Reading limits from namespace /robot_description_planning
-[ INFO] [1703645999.798200405, 1.512000000]: 
+[ INFO] [1703644572.775711075]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703644572.786727524]: 
 
 ********************************************************
 * MoveGroup using: 
@@ -445,7 +402,7 @@ Loading 'pilz_industrial_motion_planner/MoveGroupSequenceService'...
 *     - SequenceService
 ********************************************************
 
-[ INFO] [1703645999.798814475, 1.513000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
-[ INFO] [1703645999.798854496, 1.513000000]: MoveGroup context initialization complete
+[ INFO] [1703644572.787342183]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[ INFO] [1703644572.787365088]: MoveGroup context initialization complete
 
 You can start planning now!

@@ -1,11 +1,11 @@
 1martin@martinComputer:~$ roslaunch marm_gazebo arm_bringup_moveit.launch 
-... logging to /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/roslaunch-martinComputer-32700.log
+... logging to /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/roslaunch-martinComputer-54201.log
 Checking log directory for disk usage. This may take a while.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
 
 xacro: in-order processing became default in ROS Melodic. You can drop the option.
-started roslaunch server http://martinComputer:39343/
+started roslaunch server http://martinComputer:35467/
 
 SUMMARY
 ========
@@ -49,8 +49,7 @@ PARAMETERS
  * /joint_state_publisher/use_gui: False
  * /move_group/allow_trajectory_execution: True
  * /move_group/capabilities: 
- * /move_group/controller_list: [{'name': 'arm/ar...
- * /move_group/controller_manager_ns: controller_manager
+ * /move_group/controller_list: []
  * /move_group/default_planning_pipeline: ompl
  * /move_group/disable_capabilities: 
  * /move_group/max_range: 5.0
@@ -293,7 +292,7 @@ NODES
     joint_state_publisher (joint_state_publisher/joint_state_publisher)
     move_group (moveit_ros_move_group/move_group)
     robot_state_publisher (robot_state_publisher/robot_state_publisher)
-    rviz_martinComputer_32700_332606658748800578 (rviz/rviz)
+    rviz_martinComputer_54201_6752782184449965737 (rviz/rviz)
     urdf_spawner (gazebo_ros/spawn_model)
   /arm/
     arm_controller_spawner (controller_manager/spawner)
@@ -301,119 +300,85 @@ NODES
 
 ROS_MASTER_URI=http://localhost:11311
 
-process[gazebo-1]: started with pid [32726]
-process[gazebo_gui-2]: started with pid [32730]
-process[urdf_spawner-3]: started with pid [32735]
-process[arm/joint_controller_spawner-4]: started with pid [32737]
-process[robot_state_publisher-5]: started with pid [32738]
-process[arm/arm_controller_spawner-6]: started with pid [32739]
-process[move_group-7]: started with pid [32740]
-process[rviz_martinComputer_32700_332606658748800578-8]: started with pid [32741]
-process[joint_state_publisher-9]: started with pid [32746]
-[ INFO] [1703645997.124788366]: Loading robot model 'arm'...
-[ INFO] [1703645997.126765446]: No root/virtual joint specified in SRDF. Assuming fixed joint
-[ WARN] [1703645997.127060538]: Link gripper_finger_link1 has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
-[ WARN] [1703645997.127099581]: Link gripper_finger_link2 has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
-[ INFO] [1703645997.216899120]: Publishing maintained planning scene on 'monitored_planning_scene'
-[ INFO] [1703645997.218800698]: Listening to 'joint_states' for joint states
-[ INFO] [1703645997.221608505]: Listening to '/attached_collision_object' for attached collision objects
-[ INFO] [1703645997.221652088]: Starting planning scene monitor
-[ INFO] [1703645997.222960410]: Listening to '/planning_scene'
-[ INFO] [1703645997.222992887]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
-[ INFO] [1703645997.224069326]: Listening to '/collision_object'
-[ INFO] [1703645997.225250182]: Listening to '/planning_scene_world' for planning scene world geometry
-[ INFO] [1703645997.226289115]: Loading planning pipeline 'chomp'
-[ INFO] [1703645997.251124459]: Using planning interface 'CHOMP'
-[ INFO] [1703645997.254477121]: Param 'default_workspace_bounds' was not set. Using default value: 10
-[ INFO] [1703645997.254809998]: Param 'start_state_max_bounds_error' was set to 0.1
-[ INFO] [1703645997.255115217]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.255392429]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.255688638]: Param 'jiggle_fraction' was set to 0.05
-[ INFO] [1703645997.255990086]: Param 'max_sampling_attempts' was not set. Using default value: 100
-[ INFO] [1703645997.256038488]: Using planning request adapter 'Limiting Max Cartesian Speed'
-[ INFO] [1703645997.256058463]: Using planning request adapter 'Add Time Parameterization'
-[ INFO] [1703645997.256075366]: Using planning request adapter 'Resolve constraint frames to robot links'
-[ INFO] [1703645997.256091709]: Using planning request adapter 'Fix Workspace Bounds'
-[ INFO] [1703645997.256106377]: Using planning request adapter 'Fix Start State Bounds'
-[ INFO] [1703645997.256119856]: Using planning request adapter 'Fix Start State In Collision'
-[ INFO] [1703645997.256134035]: Using planning request adapter 'Fix Start State Path Constraints'
-[ INFO] [1703645997.256931097]: Loading planning pipeline 'ompl'
-[ INFO] [1703645997.265417518]: rviz version 1.14.20
-[ INFO] [1703645997.265464383]: compiled against Qt version 5.12.8
-[ INFO] [1703645997.265479539]: compiled against OGRE version 1.9.0 (Ghadamon)
-[ INFO] [1703645997.275939408]: Forcing OpenGl version 0.
-[INFO] [1703645997.290512, 0.000000]: Loading model XML from ros parameter robot_description
-[INFO] [1703645997.294528, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
-[ INFO] [1703645997.310588283]: Using planning interface 'OMPL'
-[ INFO] [1703645997.311954156]: Param 'default_workspace_bounds' was not set. Using default value: 10
-[ INFO] [1703645997.312178356]: Param 'start_state_max_bounds_error' was set to 0.1
-[ INFO] [1703645997.312403604]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.312630248]: Param 'start_state_max_dt' was not set. Using default value: 0.5
-[ INFO] [1703645997.312873236]: Param 'jiggle_fraction' was set to 0.05
-[ INFO] [1703645997.313083467]: Param 'max_sampling_attempts' was not set. Using default value: 100
-[ INFO] [1703645997.313110427]: Using planning request adapter 'Limiting Max Cartesian Speed'
-[ INFO] [1703645997.313120485]: Using planning request adapter 'Add Time Parameterization'
-[ INFO] [1703645997.313131380]: Using planning request adapter 'Resolve constraint frames to robot links'
-[ INFO] [1703645997.313139971]: Using planning request adapter 'Fix Workspace Bounds'
-[ INFO] [1703645997.313148632]: Using planning request adapter 'Fix Start State Bounds'
-[ INFO] [1703645997.313157153]: Using planning request adapter 'Fix Start State In Collision'
-[ INFO] [1703645997.313165674]: Using planning request adapter 'Fix Start State Path Constraints'
-[ INFO] [1703645997.313194799]: Loading planning pipeline 'pilz_industrial_motion_planner'
-[ INFO] [1703645997.315165244]: Reading limits from namespace /robot_description_planning
-[ INFO] [1703645997.328970580]: Available plugins: pilz_industrial_motion_planner::PlanningContextLoaderCIRC pilz_industrial_motion_planner::PlanningContextLoaderLIN pilz_industrial_motion_planner::PlanningContextLoaderPTP 
-[ INFO] [1703645997.329001102]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderCIRC
-[ INFO] [1703645997.330121543]: Registered Algorithm [CIRC]
-[ INFO] [1703645997.330138376]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderLIN
-[ INFO] [1703645997.330969242]: Registered Algorithm [LIN]
-[ INFO] [1703645997.330985306]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderPTP
-[ INFO] [1703645997.331786839]: Registered Algorithm [PTP]
-[ INFO] [1703645997.331802693]: Using planning interface 'Pilz Industrial Motion Planner'
-[INFO] [1703645997.394192, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[INFO] [1703645997.407686, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
-[ INFO] [1703645997.503800416]: Stereo is NOT SUPPORTED
-[ INFO] [1703645997.503865301]: OpenGL device: AMD RENOIR (DRM 3.42.0, 5.15.0-91-generic, LLVM 12.0.0)
-[ INFO] [1703645997.503885277]: OpenGl version: 4.6 (GLSL 4.6) limited to GLSL 1.4 on Mesa system.
-[ INFO] [1703645997.655802161]: Finished loading Gazebo ROS API Plugin.
-[ INFO] [1703645997.656958851]: waitForService: Service [/gazebo_gui/set_physics_properties] has not been advertised, waiting...
-[ INFO] [1703645997.691148290]: Finished loading Gazebo ROS API Plugin.
-[ INFO] [1703645997.692249873]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
-[ INFO] [1703645998.069173362]: waitForService: Service [/gazebo/set_physics_properties] is now available.
-[ INFO] [1703645998.112422357, 0.035000000]: Physics dynamic reconfigure ready.
-[INFO] [1703645998.264806, 0.180000]: Calling service /gazebo/spawn_urdf_model
-[INFO] [1703645998.502186, 0.354000]: Spawn status: SpawnModel: Successfully spawned entity
-[ INFO] [1703645998.514509405, 0.354000000]: Loading gazebo_ros_control plugin
-[ INFO] [1703645998.514579459, 0.354000000]: Starting gazebo_ros_control plugin in namespace: /arm
-[ INFO] [1703645998.514931403, 0.354000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.
-[ERROR] [1703645998.625482059, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint1
-[ERROR] [1703645998.626139922, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint2
-[ERROR] [1703645998.626751757, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint3
-[ERROR] [1703645998.627362475, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint4
-[ERROR] [1703645998.627984018, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint5
-[ERROR] [1703645998.628626585, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/joint6
-[ERROR] [1703645998.629269012, 0.354000000]: No p gain specified for pid.  Namespace: /arm/gazebo_ros_control/pid_gains/finger_joint1
-[ INFO] [1703645998.636689539, 0.354000000]: Loaded gazebo_ros_control.
-[INFO] [1703645998.905317, 0.624000]: Controller Spawner: Waiting for service controller_manager/switch_controller
-[INFO] [1703645998.911129, 0.630000]: Controller Spawner: Waiting for service controller_manager/unload_controller
-[INFO] [1703645998.916756, 0.635000]: Loading controller: arm_joint_controller
-[INFO] [1703645998.920436, 0.639000]: Controller Spawner: Waiting for service controller_manager/switch_controller
-[INFO] [1703645998.926061, 0.645000]: Controller Spawner: Waiting for service controller_manager/unload_controller
-[INFO] [1703645998.931622, 0.650000]: Loading controller: joint_state_controller
-[INFO] [1703645998.957940, 0.677000]: Loading controller: gripper_controller
-[INFO] [1703645998.963268, 0.682000]: Controller Spawner: Loaded controllers: joint_state_controller
-[INFO] [1703645998.975952, 0.695000]: Controller Spawner: Loaded controllers: arm_joint_controller, gripper_controller
-[INFO] [1703645998.982877, 0.701000]: Started controllers: joint_state_controller
-[INFO] [1703645998.983983, 0.703000]: Started controllers: arm_joint_controller, gripper_controller
-[urdf_spawner-3] process has finished cleanly
-log file: /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/urdf_spawner-3*.log
-[ INFO] [1703645999.184666634, 0.903000000]: Added FollowJointTrajectory controller for arm/arm_joint_controller
-[ INFO] [1703645999.698283823, 1.411000000]: Added FollowJointTrajectory controller for arm/gripper_controller
-[ INFO] [1703645999.698363166, 1.411000000]: Returned 2 controllers in list
-[ INFO] [1703645999.707672838, 1.421000000]: Trajectory execution is managing controllers
-[ INFO] [1703645999.707720541, 1.421000000]: MoveGroup debug mode is OFF
+process[gazebo-1]: started with pid [54227]
+process[gazebo_gui-2]: started with pid [54231]
+process[urdf_spawner-3]: started with pid [54236]
+process[arm/joint_controller_spawner-4]: started with pid [54238]
+process[robot_state_publisher-5]: started with pid [54239]
+process[arm/arm_controller_spawner-6]: started with pid [54240]
+process[move_group-7]: started with pid [54241]
+process[rviz_martinComputer_54201_6752782184449965737-8]: started with pid [54242]
+process[joint_state_publisher-9]: started with pid [54248]
+[ INFO] [1703647759.072292014]: rviz version 1.14.20
+[ INFO] [1703647759.072343487]: compiled against Qt version 5.12.8
+[ INFO] [1703647759.072356897]: compiled against OGRE version 1.9.0 (Ghadamon)
+[ INFO] [1703647759.082518084]: Forcing OpenGl version 0.
+[ INFO] [1703647759.114625741]: Loading robot model 'arm'...
+[ INFO] [1703647759.115273872]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[ WARN] [1703647759.115419840]: Link gripper_finger_link1 has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ WARN] [1703647759.115435904]: Link gripper_finger_link2 has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ INFO] [1703647759.186251951]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ INFO] [1703647759.188171617]: Listening to 'joint_states' for joint states
+[ INFO] [1703647759.191468281]: Listening to '/attached_collision_object' for attached collision objects
+[ INFO] [1703647759.191497685]: Starting planning scene monitor
+[ INFO] [1703647759.193054524]: Listening to '/planning_scene'
+[ INFO] [1703647759.193087140]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[ INFO] [1703647759.194488023]: Listening to '/collision_object'
+[ INFO] [1703647759.196051149]: Listening to '/planning_scene_world' for planning scene world geometry
+[ INFO] [1703647759.197378488]: Loading planning pipeline 'chomp'
+[INFO] [1703647759.217996, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1703647759.218475, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[ INFO] [1703647759.227502854]: Using planning interface 'CHOMP'
+[ INFO] [1703647759.230055006]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1703647759.230338354]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1703647759.230704254]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647759.230948071]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647759.231246923]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1703647759.231487388]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1703647759.231528804]: Using planning request adapter 'Limiting Max Cartesian Speed'
+[ INFO] [1703647759.231553248]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1703647759.231576017]: Using planning request adapter 'Resolve constraint frames to robot links'
+[ INFO] [1703647759.231633357]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1703647759.231682106]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1703647759.231701033]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1703647759.231753065]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1703647759.232723654]: Loading planning pipeline 'ompl'
+[ INFO] [1703647759.274525468]: Using planning interface 'OMPL'
+[ INFO] [1703647759.275995075]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1703647759.276376690]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1703647759.276735815]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647759.277089843]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647759.277420822]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1703647759.277693973]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1703647759.277732665]: Using planning request adapter 'Limiting Max Cartesian Speed'
+[ INFO] [1703647759.277751173]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1703647759.277766049]: Using planning request adapter 'Resolve constraint frames to robot links'
+[ INFO] [1703647759.277782113]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1703647759.277801738]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1703647759.277824996]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1703647759.277844691]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1703647759.277896304]: Loading planning pipeline 'pilz_industrial_motion_planner'
+[ INFO] [1703647759.280153725]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703647759.299082130]: Available plugins: pilz_industrial_motion_planner::PlanningContextLoaderCIRC pilz_industrial_motion_planner::PlanningContextLoaderLIN pilz_industrial_motion_planner::PlanningContextLoaderPTP 
+[ INFO] [1703647759.299116492]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderCIRC
+[ INFO] [1703647759.300717750]: Registered Algorithm [CIRC]
+[ INFO] [1703647759.300736538]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderLIN
+[ INFO] [1703647759.301846600]: Registered Algorithm [LIN]
+[ INFO] [1703647759.301887667]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderPTP
+[ INFO] [1703647759.302936898]: Registered Algorithm [PTP]
+[ INFO] [1703647759.302955615]: Using planning interface 'Pilz Industrial Motion Planner'
+[ INFO] [1703647759.307028010]: Returned 0 controllers in list
+[INFO] [1703647759.313864, 0.000000]: Loading model XML from ros parameter robot_description
+[ INFO] [1703647759.316817640]: Trajectory execution is managing controllers
+[ INFO] [1703647759.316864503]: MoveGroup debug mode is OFF
+[INFO] [1703647759.319384, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
 Loading 'move_group/ApplyPlanningSceneService'...
 Loading 'move_group/ClearOctomapService'...
 Loading 'move_group/MoveGroupCartesianPathService'...
 Loading 'move_group/MoveGroupExecuteTrajectoryAction'...
+[ INFO] [1703647759.337627927]: Stereo is NOT SUPPORTED
+[ INFO] [1703647759.337681286]: OpenGL device: AMD RENOIR (DRM 3.42.0, 5.15.0-91-generic, LLVM 12.0.0)
+[ INFO] [1703647759.337702867]: OpenGl version: 4.6 (GLSL 4.6) limited to GLSL 1.4 on Mesa system.
 Loading 'move_group/MoveGroupGetPlanningSceneService'...
 Loading 'move_group/MoveGroupKinematicsService'...
 Loading 'move_group/MoveGroupMoveAction'...
@@ -422,11 +387,11 @@ Loading 'move_group/MoveGroupPlanService'...
 Loading 'move_group/MoveGroupQueryPlannersService'...
 Loading 'move_group/MoveGroupStateValidationService'...
 Loading 'pilz_industrial_motion_planner/MoveGroupSequenceAction'...
-[ INFO] [1703645999.758017576, 1.472000000]: initialize move group sequence action
-[ INFO] [1703645999.762824114, 1.476000000]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703647759.369713375]: initialize move group sequence action
+[ INFO] [1703647759.373832424]: Reading limits from namespace /robot_description_planning
 Loading 'pilz_industrial_motion_planner/MoveGroupSequenceService'...
-[ INFO] [1703645999.781978254, 1.496000000]: Reading limits from namespace /robot_description_planning
-[ INFO] [1703645999.798200405, 1.512000000]: 
+[ INFO] [1703647759.385660800]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703647759.400439566]: 
 
 ********************************************************
 * MoveGroup using: 
@@ -445,7 +410,7 @@ Loading 'pilz_industrial_motion_planner/MoveGroupSequenceService'...
 *     - SequenceService
 ********************************************************
 
-[ INFO] [1703645999.798814475, 1.513000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
-[ INFO] [1703645999.798854496, 1.513000000]: MoveGroup context initialization complete
+[ INFO] [1703647759.401138331]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[ INFO] [1703647759.401182192]: MoveGroup context initialization complete
 
 You can start planning now!

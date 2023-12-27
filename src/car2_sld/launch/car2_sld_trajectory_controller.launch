@@ -1,0 +1,8 @@
+<launch>
+
+    <rosparam file="$(find car2_sld)/config/trajectory_control.yaml" command="load"/>
+
+    <node name="car2_sld_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/car2_sld" args="arm_controller gripper_controller"/>
+
+</launch>

@@ -1,0 +1,486 @@
+1martin@martinComputer:~/navigationRobot_ws$ roslaunch car2_sld car2_sld_bringup_moveit.launch 
+... logging to /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/roslaunch-martinComputer-51079.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://martinComputer:37877/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /car2_sld/arm_controller/gains/arm1_joint/d: 0.1
+ * /car2_sld/arm_controller/gains/arm1_joint/i: 0.0
+ * /car2_sld/arm_controller/gains/arm1_joint/i_clamp: 0.0
+ * /car2_sld/arm_controller/gains/arm1_joint/p: 1000.0
+ * /car2_sld/arm_controller/gains/arm2_joint/d: 0.1
+ * /car2_sld/arm_controller/gains/arm2_joint/i: 0.0
+ * /car2_sld/arm_controller/gains/arm2_joint/i_clamp: 0.0
+ * /car2_sld/arm_controller/gains/arm2_joint/p: 1000.0
+ * /car2_sld/arm_controller/gains/arm3_joint/d: 0.1
+ * /car2_sld/arm_controller/gains/arm3_joint/i: 0.0
+ * /car2_sld/arm_controller/gains/arm3_joint/i_clamp: 0.0
+ * /car2_sld/arm_controller/gains/arm3_joint/p: 1000.0
+ * /car2_sld/arm_controller/joints: ['arm1_joint', 'a...
+ * /car2_sld/arm_controller/type: position_controll...
+ * /car2_sld/gripper_controller/gains/finger1_joint/d: 1.0
+ * /car2_sld/gripper_controller/gains/finger1_joint/i: 0.01
+ * /car2_sld/gripper_controller/gains/finger1_joint/i_clamp: 1.0
+ * /car2_sld/gripper_controller/gains/finger1_joint/p: 50.0
+ * /car2_sld/gripper_controller/gains/finger2_joint/d: 1.0
+ * /car2_sld/gripper_controller/gains/finger2_joint/i: 0.01
+ * /car2_sld/gripper_controller/gains/finger2_joint/i_clamp: 1.0
+ * /car2_sld/gripper_controller/gains/finger2_joint/p: 50.0
+ * /car2_sld/gripper_controller/joints: ['finger1_joint',...
+ * /car2_sld/gripper_controller/type: position_controll...
+ * /car2_sld/joint_state_controller/publish_rate: 50
+ * /car2_sld/joint_state_controller/type: joint_state_contr...
+ * /gazebo/enable_ros_network: True
+ * /joint_state_publisher/use_gui: False
+ * /move_group/allow_trajectory_execution: True
+ * /move_group/arm_controller/gains/arm1_joint/d: 1
+ * /move_group/arm_controller/gains/arm1_joint/i: 1
+ * /move_group/arm_controller/gains/arm1_joint/i_clamp: 1
+ * /move_group/arm_controller/gains/arm1_joint/p: 100
+ * /move_group/arm_controller/gains/arm2_joint/d: 1
+ * /move_group/arm_controller/gains/arm2_joint/i: 1
+ * /move_group/arm_controller/gains/arm2_joint/i_clamp: 1
+ * /move_group/arm_controller/gains/arm2_joint/p: 100
+ * /move_group/arm_controller/gains/arm3_joint/d: 1
+ * /move_group/arm_controller/gains/arm3_joint/i: 1
+ * /move_group/arm_controller/gains/arm3_joint/i_clamp: 1
+ * /move_group/arm_controller/gains/arm3_joint/p: 100
+ * /move_group/arm_controller/joints: ['arm1_joint', 'a...
+ * /move_group/arm_controller/type: effort_controller...
+ * /move_group/capabilities: 
+ * /move_group/controller_list: [{'name': 'arm_co...
+ * /move_group/default_planning_pipeline: ompl
+ * /move_group/disable_capabilities: 
+ * /move_group/gripper_controller/gains/finger1_joint/d: 1
+ * /move_group/gripper_controller/gains/finger1_joint/i: 1
+ * /move_group/gripper_controller/gains/finger1_joint/i_clamp: 1
+ * /move_group/gripper_controller/gains/finger1_joint/p: 100
+ * /move_group/gripper_controller/gains/finger2_joint/d: 1
+ * /move_group/gripper_controller/gains/finger2_joint/i: 1
+ * /move_group/gripper_controller/gains/finger2_joint/i_clamp: 1
+ * /move_group/gripper_controller/gains/finger2_joint/p: 100
+ * /move_group/gripper_controller/joints: ['finger1_joint',...
+ * /move_group/gripper_controller/type: effort_controller...
+ * /move_group/max_range: 5.0
+ * /move_group/monitor_dynamics: False
+ * /move_group/moveit_controller_manager: moveit_simple_con...
+ * /move_group/moveit_manage_controllers: True
+ * /move_group/octomap_resolution: 0.025
+ * /move_group/planning_pipelines/chomp/collision_clearance: 0.2
+ * /move_group/planning_pipelines/chomp/collision_threshold: 0.07
+ * /move_group/planning_pipelines/chomp/enable_failure_recovery: False
+ * /move_group/planning_pipelines/chomp/jiggle_fraction: 0.05
+ * /move_group/planning_pipelines/chomp/joint_update_limit: 0.1
+ * /move_group/planning_pipelines/chomp/learning_rate: 0.01
+ * /move_group/planning_pipelines/chomp/max_iterations: 200
+ * /move_group/planning_pipelines/chomp/max_iterations_after_collision_free: 5
+ * /move_group/planning_pipelines/chomp/max_recovery_attempts: 5
+ * /move_group/planning_pipelines/chomp/obstacle_cost_weight: 1.0
+ * /move_group/planning_pipelines/chomp/planning_plugin: chomp_interface/C...
+ * /move_group/planning_pipelines/chomp/planning_time_limit: 10.0
+ * /move_group/planning_pipelines/chomp/pseudo_inverse_ridge_factor: 1e-4
+ * /move_group/planning_pipelines/chomp/request_adapters: default_planner_r...
+ * /move_group/planning_pipelines/chomp/ridge_factor: 0.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_acceleration: 1.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_jerk: 0.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_velocity: 0.0
+ * /move_group/planning_pipelines/chomp/smoothness_cost_weight: 0.1
+ * /move_group/planning_pipelines/chomp/start_state_max_bounds_error: 0.1
+ * /move_group/planning_pipelines/chomp/use_pseudo_inverse: False
+ * /move_group/planning_pipelines/chomp/use_stochastic_descent: True
+ * /move_group/planning_pipelines/ompl/arm/longest_valid_segment_fraction: 0.005
+ * /move_group/planning_pipelines/ompl/arm/planner_configs: ['AnytimePathShor...
+ * /move_group/planning_pipelines/ompl/arm/projection_evaluator: joints(arm1_joint...
+ * /move_group/planning_pipelines/ompl/gripper/longest_valid_segment_fraction: 0.005
+ * /move_group/planning_pipelines/ompl/gripper/planner_configs: ['AnytimePathShor...
+ * /move_group/planning_pipelines/ompl/gripper/projection_evaluator: joints(finger1_jo...
+ * /move_group/planning_pipelines/ompl/jiggle_fraction: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/delay_rewiring_to_first_solution: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/drop_unconnected_samples_on_prune: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/find_approximate_solutions: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/inflation_scaling_parameter: 10
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/initial_inflation_factor: 1000000
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/prune_threshold_as_fractional_cost_change: 0.1
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/rewire_factor: 1.001
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/samples_per_batch: 100
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/stop_on_each_solution_improvement: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/truncation_scaling_parameter: 5.0
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/type: geometric::ABITstar
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_graph_pruning: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_just_in_time_sampling: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_k_nearest: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/ABITstar/use_strict_queue_ordering: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/find_approximate_solutions: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/rewire_factor: 1.001
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/samples_per_batch: 100
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/set_max_num_goals: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/type: geometric::AITstar
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/use_graph_pruning: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/AITstar/use_k_nearest: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/hybridize: True
+ * /move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/max_hybrid_paths: 24
+ * /move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/num_planners: 4
+ * /move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/planners: 
+ * /move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/shortcut: True
+ * /move_group/planning_pipelines/ompl/planner_configs/AnytimePathShortening/type: geometric::Anytim...
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/balanced: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/cache_cc: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/extended_fmt: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/heuristics: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/nearest_k: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/num_samples: 1000
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/optimality: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/radius_multiplier: 1.0
+ * /move_group/planning_pipelines/ompl/planner_configs/BFMT/type: geometric::BFMT
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/delay_rewiring_to_first_solution: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/drop_unconnected_samples_on_prune: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/find_approximate_solutions: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/prune_threshold_as_fractional_cost_change: 0.1
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/rewire_factor: 1.001
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/samples_per_batch: 100
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/stop_on_each_solution_improvement: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/type: geometric::BITstar
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/use_graph_pruning: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/use_just_in_time_sampling: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/use_k_nearest: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/BITstar/use_strict_queue_ordering: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/BKPIECE/border_fraction: 0.9
+ * /move_group/planning_pipelines/ompl/planner_configs/BKPIECE/failed_expansion_score_factor: 0.5
+ * /move_group/planning_pipelines/ompl/planner_configs/BKPIECE/min_valid_path_fraction: 0.5
+ * /move_group/planning_pipelines/ompl/planner_configs/BKPIECE/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/BKPIECE/type: geometric::BKPIECE
+ * /move_group/planning_pipelines/ompl/planner_configs/BiEST/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/BiEST/type: geometric::BiEST
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/cost_threshold: 1e300
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/frontier_node_ratio: 0.1
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/frontier_threshold: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/init_temperature: 100
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/temp_change_factor: 0.1
+ * /move_group/planning_pipelines/ompl/planner_configs/BiTRRT/type: geometric::BiTRRT
+ * /move_group/planning_pipelines/ompl/planner_configs/EST/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/EST/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/EST/type: geometric::EST
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/cache_cc: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/extended_fmt: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/heuristics: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/nearest_k: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/num_samples: 1000
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/radius_multiplier: 1.1
+ * /move_group/planning_pipelines/ompl/planner_configs/FMT/type: geometric::FMT
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECE/border_fraction: 0.9
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECE/failed_expansion_score_factor: 0.5
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECE/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECE/min_valid_path_fraction: 0.5
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECE/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/KPIECE/type: geometric::KPIECE
+ * /move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/border_fraction: 0.9
+ * /move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/min_valid_path_fraction: 0.5
+ * /move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/LBKPIECE/type: geometric::LBKPIECE
+ * /move_group/planning_pipelines/ompl/planner_configs/LBTRRT/epsilon: 0.4
+ * /move_group/planning_pipelines/ompl/planner_configs/LBTRRT/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/LBTRRT/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/LBTRRT/type: geometric::LBTRRT
+ * /move_group/planning_pipelines/ompl/planner_configs/LazyPRM/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/LazyPRM/type: geometric::LazyPRM
+ * /move_group/planning_pipelines/ompl/planner_configs/LazyPRMstar/type: geometric::LazyPR...
+ * /move_group/planning_pipelines/ompl/planner_configs/PDST/type: geometric::PDST
+ * /move_group/planning_pipelines/ompl/planner_configs/PRM/max_nearest_neighbors: 10
+ * /move_group/planning_pipelines/ompl/planner_configs/PRM/type: geometric::PRM
+ * /move_group/planning_pipelines/ompl/planner_configs/PRMstar/type: geometric::PRMstar
+ * /move_group/planning_pipelines/ompl/planner_configs/ProjEST/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/ProjEST/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/ProjEST/type: geometric::ProjEST
+ * /move_group/planning_pipelines/ompl/planner_configs/RRT/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/RRT/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/RRT/type: geometric::RRT
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTConnect/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTConnect/type: geometric::RRTCon...
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTstar/delay_collision_checking: 1
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTstar/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTstar/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/RRTstar/type: geometric::RRTstar
+ * /move_group/planning_pipelines/ompl/planner_configs/SBL/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/SBL/type: geometric::SBL
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARS/dense_delta_fraction: 0.001
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARS/max_failures: 1000
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARS/sparse_delta_fraction: 0.25
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARS/stretch_factor: 3.0
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARS/type: geometric::SPARS
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARStwo/dense_delta_fraction: 0.001
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARStwo/max_failures: 5000
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARStwo/sparse_delta_fraction: 0.25
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARStwo/stretch_factor: 3.0
+ * /move_group/planning_pipelines/ompl/planner_configs/SPARStwo/type: geometric::SPARStwo
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/degree: 16
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/estimated_dimension: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/max_degree: 18
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/max_pts_per_leaf: 6
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/min_degree: 12
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/min_valid_path_fraction: 0.2
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/type: geometric::STRIDE
+ * /move_group/planning_pipelines/ompl/planner_configs/STRIDE/use_projected_distance: 0
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/frontier_node_ratio: 0.1
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/frontier_threshold: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/goal_bias: 0.05
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/init_temperature: 10e-6
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/k_constant: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/max_states_failed: 10
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/min_temperature: 10e-10
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/range: 0.0
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/temp_change_factor: 2.0
+ * /move_group/planning_pipelines/ompl/planner_configs/TRRT/type: geometric::TRRT
+ * /move_group/planning_pipelines/ompl/planning_plugin: ompl_interface/OM...
+ * /move_group/planning_pipelines/ompl/request_adapters: default_planner_r...
+ * /move_group/planning_pipelines/ompl/start_state_max_bounds_error: 0.1
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/capabilities: pilz_industrial_m...
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/default_planner_config: PTP
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/planning_plugin: pilz_industrial_m...
+ * /move_group/planning_pipelines/pilz_industrial_motion_planner/request_adapters: 
+ * /move_group/planning_scene_monitor/publish_geometry_updates: True
+ * /move_group/planning_scene_monitor/publish_planning_scene: True
+ * /move_group/planning_scene_monitor/publish_state_updates: True
+ * /move_group/planning_scene_monitor/publish_transforms_updates: True
+ * /move_group/sense_for_plan/max_safe_path_cost: 1
+ * /move_group/sensors: [{'filtered_cloud...
+ * /move_group/trajectory_execution/allowed_execution_duration_scaling: 1.2
+ * /move_group/trajectory_execution/allowed_goal_duration_margin: 0.5
+ * /move_group/trajectory_execution/allowed_start_tolerance: 0.01
+ * /robot_description: <?xml version="1....
+ * /robot_description_kinematics/arm/goal_joint_tolerance: 0.0001
+ * /robot_description_kinematics/arm/goal_orientation_tolerance: 0.001
+ * /robot_description_kinematics/arm/goal_position_tolerance: 0.0001
+ * /robot_description_kinematics/arm/kinematics_solver: kdl_kinematics_pl...
+ * /robot_description_kinematics/arm/kinematics_solver_search_resolution: 0.005
+ * /robot_description_kinematics/arm/kinematics_solver_timeout: 0.05
+ * /robot_description_planning/cartesian_limits/max_rot_vel: 1.57
+ * /robot_description_planning/cartesian_limits/max_trans_acc: 2.25
+ * /robot_description_planning/cartesian_limits/max_trans_dec: -5
+ * /robot_description_planning/cartesian_limits/max_trans_vel: 1
+ * /robot_description_planning/default_acceleration_scaling_factor: 0.1
+ * /robot_description_planning/default_velocity_scaling_factor: 0.1
+ * /robot_description_planning/joint_limits/arm1_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/arm1_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/arm1_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/arm1_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/arm2_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/arm2_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/arm2_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/arm2_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/arm3_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/arm3_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/arm3_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/arm3_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/finger1_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/finger1_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/finger1_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/finger1_joint/max_velocity: 0
+ * /robot_description_planning/joint_limits/finger2_joint/has_acceleration_limits: False
+ * /robot_description_planning/joint_limits/finger2_joint/has_velocity_limits: False
+ * /robot_description_planning/joint_limits/finger2_joint/max_acceleration: 0
+ * /robot_description_planning/joint_limits/finger2_joint/max_velocity: 0
+ * /robot_description_semantic: <?xml version="1....
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+ * /source_list: ['/car2_sld/joint...
+ * /use_sim_time: True
+
+NODES
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    joint_state_publisher (joint_state_publisher/joint_state_publisher)
+    move_group (moveit_ros_move_group/move_group)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rviz_martinComputer_51079_2969590018095504005 (rviz/rviz)
+    urdf_spawner (gazebo_ros/spawn_model)
+  /car2_sld/
+    car2_sld_controller_spawner (controller_manager/spawner)
+    joint_controller_spawner (controller_manager/spawner)
+
+ROS_MASTER_URI=http://localhost:11311
+
+process[gazebo-1]: started with pid [51101]
+process[gazebo_gui-2]: started with pid [51105]
+process[urdf_spawner-3]: started with pid [51110]
+process[car2_sld/joint_controller_spawner-4]: started with pid [51112]
+process[robot_state_publisher-5]: started with pid [51113]
+process[car2_sld/car2_sld_controller_spawner-6]: started with pid [51114]
+process[move_group-7]: started with pid [51115]
+process[rviz_martinComputer_51079_2969590018095504005-8]: started with pid [51116]
+process[joint_state_publisher-9]: started with pid [51119]
+[ INFO] [1703647561.847843136]: rviz version 1.14.20
+[ INFO] [1703647561.847890698]: compiled against Qt version 5.12.8
+[ INFO] [1703647561.847901803]: compiled against OGRE version 1.9.0 (Ghadamon)
+[ INFO] [1703647561.856098629]: Forcing OpenGl version 0.
+[ INFO] [1703647561.893972080]: Loading robot model 'car2_sld'...
+[ INFO] [1703647561.894744250]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[INFO] [1703647561.895696, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[ WARN] [1703647561.937413937]: Link camera_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ WARN] [1703647561.937443969]: Link laser_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ WARN] [1703647561.937455353]: Link laserholder_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[ERROR] [1703647561.938449828]: The model for joint 'hand_joint' requires 0 variable values, but only 1 variable values were supplied in default state 'home' for group 'arm'
+[ERROR] [1703647561.938475181]: The model for joint 'hand_joint' requires 0 variable values, but only 1 variable values were supplied in default state 'up' for group 'arm'
+[ INFO] [1703647561.979487665]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ INFO] [1703647561.981198925]: Listening to 'joint_states' for joint states
+[ INFO] [1703647561.984127037]: Listening to '/attached_collision_object' for attached collision objects
+[ INFO] [1703647561.984158954]: Starting planning scene monitor
+[ INFO] [1703647561.985420085]: Listening to '/planning_scene'
+[ INFO] [1703647561.985445857]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[ INFO] [1703647561.986702727]: Listening to '/collision_object'
+[ INFO] [1703647561.987858816]: Listening to '/planning_scene_world' for planning scene world geometry
+[ INFO] [1703647562.003851227]: Listening to '/head_mount_kinect/depth_registered/points' using message filter with target frame 'dummy '
+[ INFO] [1703647562.003897392]: Loading planning pipeline 'chomp'
+[INFO] [1703647562.019416, 0.000000]: Loading model XML from ros parameter robot_description
+[INFO] [1703647562.025592, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+[ INFO] [1703647562.026890102]: Using planning interface 'CHOMP'
+[ INFO] [1703647562.030451607]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1703647562.030759539]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1703647562.031036601]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647562.031329726]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647562.031564744]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1703647562.031787818]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1703647562.031820713]: Using planning request adapter 'Limiting Max Cartesian Speed'
+[ INFO] [1703647562.031837335]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1703647562.031849209]: Using planning request adapter 'Resolve constraint frames to robot links'
+[ INFO] [1703647562.031857590]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1703647562.031877704]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1703647562.031895234]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1703647562.031904453]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1703647562.032678927]: Loading planning pipeline 'ompl'
+[ INFO] [1703647562.052338095]: Stereo is NOT SUPPORTED
+[ INFO] [1703647562.052390616]: OpenGL device: AMD RENOIR (DRM 3.42.0, 5.15.0-91-generic, LLVM 12.0.0)
+[ INFO] [1703647562.052406680]: OpenGl version: 4.6 (GLSL 4.6) limited to GLSL 1.4 on Mesa system.
+[INFO] [1703647562.062192, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[ INFO] [1703647562.084634760]: Using planning interface 'OMPL'
+[ INFO] [1703647562.085970133]: Param 'default_workspace_bounds' was not set. Using default value: 10
+[ INFO] [1703647562.086329259]: Param 'start_state_max_bounds_error' was set to 0.1
+[ INFO] [1703647562.086661146]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647562.087011053]: Param 'start_state_max_dt' was not set. Using default value: 0.5
+[ INFO] [1703647562.087347131]: Param 'jiggle_fraction' was set to 0.05
+[ INFO] [1703647562.088212748]: Param 'max_sampling_attempts' was not set. Using default value: 100
+[ INFO] [1703647562.088258634]: Using planning request adapter 'Limiting Max Cartesian Speed'
+[ INFO] [1703647562.088271904]: Using planning request adapter 'Add Time Parameterization'
+[ INFO] [1703647562.088282450]: Using planning request adapter 'Resolve constraint frames to robot links'
+[ INFO] [1703647562.088292507]: Using planning request adapter 'Fix Workspace Bounds'
+[ INFO] [1703647562.088304730]: Using planning request adapter 'Fix Start State Bounds'
+[ INFO] [1703647562.088315136]: Using planning request adapter 'Fix Start State In Collision'
+[ INFO] [1703647562.088325682]: Using planning request adapter 'Fix Start State Path Constraints'
+[ INFO] [1703647562.088361790]: Loading planning pipeline 'pilz_industrial_motion_planner'
+[ INFO] [1703647562.091139463]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703647562.106890361]: Available plugins: pilz_industrial_motion_planner::PlanningContextLoaderCIRC pilz_industrial_motion_planner::PlanningContextLoaderLIN pilz_industrial_motion_planner::PlanningContextLoaderPTP 
+[ INFO] [1703647562.106914247]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderCIRC
+[ INFO] [1703647562.108034647]: Registered Algorithm [CIRC]
+[ INFO] [1703647562.108049733]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderLIN
+[ INFO] [1703647562.108954112]: Registered Algorithm [LIN]
+[ INFO] [1703647562.108969408]: About to load: pilz_industrial_motion_planner::PlanningContextLoaderPTP
+[ INFO] [1703647562.109799266]: Registered Algorithm [PTP]
+[ INFO] [1703647562.109815889]: Using planning interface 'Pilz Industrial Motion Planner'
+[ INFO] [1703647562.195933578]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1703647562.196905076]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1703647562.258282617]: Finished loading Gazebo ROS API Plugin.
+[ INFO] [1703647562.259870956]: waitForService: Service [/gazebo_gui/set_physics_properties] has not been advertised, waiting...
+[ INFO] [1703647562.618205562, 0.001000000]: waitForService: Service [/gazebo/set_physics_properties] is now available.
+[INFO] [1703647562.636550, 0.000000]: Calling service /gazebo/spawn_urdf_model
+[ INFO] [1703647563.671417314, 0.168000000]: Camera Plugin: Using the 'robotNamespace' param: '/'
+[ INFO] [1703647563.673550837, 0.168000000]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""
+[ INFO] [1703647563.680668470, 0.168000000]: Laser Plugin: Using the 'robotNamespace' param: '/'
+[ INFO] [1703647563.680726159, 0.168000000]: Starting Laser Plugin (ns = /)
+[ INFO] [1703647563.681279863, 0.168000000]: Laser Plugin (ns = /)  <tf_prefix_>, set to ""
+[INFO] [1703647563.683998, 0.168000]: Spawn status: SpawnModel: Successfully spawned entity
+[ INFO] [1703647563.689614417, 0.168000000]: Physics dynamic reconfigure ready.
+[ INFO] [1703647563.707871793, 0.168000000]: Starting plugin DiffDrive(ns = //)
+[ INFO] [1703647563.707980396, 0.168000000]: DiffDrive(ns = //): <rosDebugLevel> = Debug
+[ INFO] [1703647563.708444774, 0.168000000]: DiffDrive(ns = //): <tf_prefix> = 
+[DEBUG] [1703647563.708507142, 0.168000000]: DiffDrive(ns = //): <commandTopic> = cmd_vel
+[DEBUG] [1703647563.708525790, 0.168000000]: DiffDrive(ns = //): <odometryTopic> = odom
+[DEBUG] [1703647563.708540946, 0.168000000]: DiffDrive(ns = //): <odometryFrame> = odom
+[DEBUG] [1703647563.708556800, 0.168000000]: DiffDrive(ns = //): <robotBaseFrame> = dummy
+[DEBUG] [1703647563.708606247, 0.168000000]: DiffDrive(ns = //): <publishWheelTF> = true
+[ WARN] [1703647563.708635790, 0.168000000]: DiffDrive(ns = //): missing <publishOdomTF> default is true
+[DEBUG] [1703647563.708682235, 0.168000000]: DiffDrive(ns = //): <publishWheelJointState> = true
+[DEBUG] [1703647563.708733150, 0.168000000]: DiffDrive(ns = //): <wheelSeparation> = 0.28999999999999998
+[DEBUG] [1703647563.708754591, 0.168000000]: DiffDrive(ns = //): <wheelDiameter> = 0.20000000000000001
+[DEBUG] [1703647563.708772610, 0.168000000]: DiffDrive(ns = //): <wheelAcceleration> = 5
+[DEBUG] [1703647563.708790490, 0.168000000]: DiffDrive(ns = //): <wheelTorque> = 100
+[DEBUG] [1703647563.708808649, 0.168000000]: DiffDrive(ns = //): <updateRate> = 100
+[ WARN] [1703647563.708855373, 0.168000000]: DiffDrive(ns = //): missing <odometrySource> default is 1
+[DEBUG] [1703647563.708905030, 0.168000000]: DiffDrive(ns = //): <leftJoint> = wlb_joint
+[DEBUG] [1703647563.708926821, 0.168000000]: DiffDrive(ns = //): <rightJoint> = wrb_joint
+[ INFO] [1703647563.709344334, 0.168000000]: DiffDrive(ns = //): Advertise joint_states
+[ INFO] [1703647563.709720920, 0.168000000]: DiffDrive(ns = //): Try to subscribe to cmd_vel
+[ INFO] [1703647563.711115798, 0.168000000]: DiffDrive(ns = //): Subscribe to cmd_vel
+[ INFO] [1703647563.711739973, 0.168000000]: DiffDrive(ns = //): Advertise odom on odom 
+[ INFO] [1703647563.720804930, 0.168000000]: Loading gazebo_ros_control plugin
+[ INFO] [1703647563.720909134, 0.168000000]: Starting gazebo_ros_control plugin in namespace: /car2_sld
+[ INFO] [1703647563.721224050, 0.168000000]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.
+[ERROR] [1703647563.832876545, 0.168000000]: No p gain specified for pid.  Namespace: /car2_sld/gazebo_ros_control/pid_gains/wlb_joint
+[ERROR] [1703647563.832953790, 0.168000000]: This robot has a joint named "wrb_joint_joint" which is not in the gazebo model.
+[FATAL] [1703647563.832976698, 0.168000000]: Could not initialize robot simulation interface
+[DEBUG] [1703647563.843400145, 0.179000000]: Trying to publish message of type [nav_msgs/Odometry/cd5e73d190d741a2f92e81eda573aca7] on a publisher with type [nav_msgs/Odometry/cd5e73d190d741a2f92e81eda573aca7]
+[DEBUG] [1703647563.843478089, 0.179000000]: Trying to publish message of type [sensor_msgs/JointState/3066dcd76a6cfaef579bd0f34173e9fd] on a publisher with type [sensor_msgs/JointState/3066dcd76a6cfaef579bd0f34173e9fd]
+[urdf_spawner-3] process has finished cleanly
+log file: /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/urdf_spawner-3*.log
+[ WARN] [1703647568.882940523, 5.181000000]: Waiting for arm_controller/follow_joint_trajectory to come up
+[ WARN] [1703647574.956302194, 11.181000000]: Waiting for arm_controller/follow_joint_trajectory to come up
+[ERROR] [1703647581.009354013, 17.181000000]: Action client not connected: arm_controller/follow_joint_trajectory
+[ WARN] [1703647586.088468504, 22.214000000]: Waiting for gripper_controller/follow_joint_trajectory to come up
+[WARN] [1703647592.035206, 28.102000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[ WARN] [1703647592.148539419, 28.214000000]: Waiting for gripper_controller/follow_joint_trajectory to come up
+[WARN] [1703647592.201079, 28.265000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[car2_sld/car2_sld_controller_spawner-6] process has finished cleanly
+log file: /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/car2_sld-car2_sld_controller_spawner-6*.log
+[car2_sld/joint_controller_spawner-4] process has finished cleanly
+log file: /home/martin/.ros/log/fead5628-a463-11ee-965b-a7677b6c9e0e/car2_sld-joint_controller_spawner-4*.log
+[ERROR] [1703647598.202556982, 34.214000000]: Action client not connected: gripper_controller/follow_joint_trajectory
+[ INFO] [1703647598.255781692, 34.267000000]: Returned 0 controllers in list
+[ INFO] [1703647598.267155055, 34.278000000]: Trajectory execution is managing controllers
+[ INFO] [1703647598.267188928, 34.278000000]: MoveGroup debug mode is OFF
+Loading 'move_group/ApplyPlanningSceneService'...
+Loading 'move_group/ClearOctomapService'...
+Loading 'move_group/MoveGroupCartesianPathService'...
+Loading 'move_group/MoveGroupExecuteTrajectoryAction'...
+Loading 'move_group/MoveGroupGetPlanningSceneService'...
+Loading 'move_group/MoveGroupKinematicsService'...
+Loading 'move_group/MoveGroupMoveAction'...
+Loading 'move_group/MoveGroupPickPlaceAction'...
+Loading 'move_group/MoveGroupPlanService'...
+Loading 'move_group/MoveGroupQueryPlannersService'...
+Loading 'move_group/MoveGroupStateValidationService'...
+Loading 'pilz_industrial_motion_planner/MoveGroupSequenceAction'...
+[ INFO] [1703647598.311537883, 34.323000000]: initialize move group sequence action
+[ INFO] [1703647598.317426791, 34.328000000]: Reading limits from namespace /robot_description_planning
+Loading 'pilz_industrial_motion_planner/MoveGroupSequenceService'...
+[ INFO] [1703647598.330588379, 34.342000000]: Reading limits from namespace /robot_description_planning
+[ INFO] [1703647598.348915106, 34.360000000]: 
+
+********************************************************
+* MoveGroup using: 
+*     - ApplyPlanningSceneService
+*     - ClearOctomapService
+*     - CartesianPathService
+*     - ExecuteTrajectoryAction
+*     - GetPlanningSceneService
+*     - KinematicsService
+*     - MoveAction
+*     - PickPlaceAction
+*     - MotionPlanService
+*     - QueryPlannersService
+*     - StateValidationService
+*     - SequenceAction
+*     - SequenceService
+********************************************************
+
+[ INFO] [1703647598.349477820, 34.360000000]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[ INFO] [1703647598.349502544, 34.360000000]: MoveGroup context initialization complete
+
+You can start planning now!
