@@ -169,6 +169,7 @@
         <parent link="base_link" />
         <child link="arm1_link" />
         <axis xyz="0 1 0" />
+        <dynamics damping="50" friction="1"/>
     </joint>
     <link name="arm2_link">
         <inertial>
@@ -197,6 +198,7 @@
         <parent link="arm1_link" />
         <child link="arm2_link" />
         <axis xyz="0 0 1" />
+        <dynamics damping="50" friction="1"/>
     </joint>
     <link name="arm3_link">
         <inertial>
@@ -225,6 +227,7 @@
         <parent link="arm2_link" />
         <child link="arm3_link" />
         <axis xyz="0 0 1" />
+        <dynamics damping="50" friction="1"/>
     </joint>
     <link name="hand_link">
         <inertial>
