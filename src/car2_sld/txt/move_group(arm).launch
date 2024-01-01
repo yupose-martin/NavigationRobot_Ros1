@@ -71,14 +71,14 @@
   <!-- Trajectory Execution Functionality -->
   <include ns="move_group" file="$(dirname)/trajectory_execution.launch.xml" if="$(arg allow_trajectory_execution)">
     <arg name="moveit_manage_controllers" value="true" />
-    <!-- <arg name="moveit_controller_manager" value="car2_sld" /> -->
     <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)" />
+    <!-- <arg name="moveit_controller_manager" value="arm" /> -->
     <arg name="fake_execution_type" value="$(arg fake_execution_type)" />
   </include>
 
   <!-- Sensors Functionality -->
   <include ns="move_group" file="$(dirname)/sensor_manager.launch.xml" if="$(arg allow_trajectory_execution)">
-    <arg name="moveit_sensor_manager" value="car2_sld" />
+    <arg name="moveit_sensor_manager" value="arm" />
   </include>
 
   <!-- Start the actual move_group node/action server -->

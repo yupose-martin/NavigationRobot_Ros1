@@ -1,6 +1,6 @@
 car2_sld:
   arm_controller:
-    type: "car2_sld/JointTrajectoryController"
+    type: "position_controllers/JointTrajectoryController"
     joints:
       - arm1_joint
       - arm2_joint
@@ -13,7 +13,7 @@ car2_sld:
 
 
   gripper_controller:
-    type: "car2_sld/JointTrajectoryController"
+    type: "position_controllers/JointTrajectoryController"
     joints:
       - finger1_joint
       - finger2_joint
