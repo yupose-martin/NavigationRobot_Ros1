@@ -3131,7 +3131,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
       <static>0</static>
     </model>
     <state world_name='default'>
-      <sim_time>1298 470000000</sim_time>
+      <sim_time>0</sim_time>
       <real_time>1304 307193893</real_time>
       <wall_time>1412023784 735639465</wall_time>
       <model name='Construction Barrel'>
