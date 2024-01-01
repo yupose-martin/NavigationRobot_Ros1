@@ -4,9 +4,24 @@ ros1-navigation robot as project in ROS class
 
 ## 跑的流程
 
+#### 基础移动
+
 * roslaunch car2_sld gazebo.launch
 * roslaunch car2_sld gmapping_demo.launch
 * roslaunch car2_sld car2bot_teleop.launch
+
+#### mediapipe（需要先跑car2_sld gazebo）
+
+* roslaunch mediapipe_ros rgb_camera.launch device:=video0
+* rqt_image_view
+* python3 hands_gesture.py (python yyds)
+
+#### 语音操纵
+
+* roslaunch car2_sld gazebo.launch
+* rosrun robot_voice iat_publish
+* rosrun car2_voice car2_voice
+* pub wakeUp
 
 ## 进度
 
@@ -23,7 +38,8 @@ ros1-navigation robot as project in ROS class
 
 ## 待解决问题
 
-* 机器人的参数问题。从天空中掉下来，会自行移动，靠墙之后不能够teleop移动，估计惯性太大还是啥？
+* 机械臂软 动不了
+* joint_joint teleop 真的离谱 （urdf dynamics之后也不行）
 
 ## 使用git
 
