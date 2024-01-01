@@ -1,38 +1,60 @@
-arm_controller:
-  type: effort_controllers/JointTrajectoryController
-  joints:
-    - arm1_joint
-    - arm2_joint
-    - arm3_joint
-  gains:
-    arm1_joint:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-    arm2_joint:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-    arm3_joint:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-gripper_controller:
-  type: effort_controllers/JointTrajectoryController
-  joints:
-    - finger1_joint
-    - finger2_joint
-  gains:
-    finger1_joint:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-    finger2_joint:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
+controller_manager_ns: controller_manager
+controller_list:
+  - name: car2_sld/arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - arm1_joint
+      - arm2_joint
+      - arm3_joint
+
+  - name: car2_sld/gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - finger1_joint
+      - finger2_joint
+
+  
+
+
+#arm_controller:
+#  type: effort_controllers/JointTrajectoryController
+#  joints:
+#    - arm1_joint
+#    - arm2_joint
+#    - arm3_joint
+#  gains:
+#    arm1_joint:
+#      p: 100
+#      d: 1
+#      i: 1
+#      i_clamp: 1
+#    arm2_joint:
+#      p: 100
+#      d: 1
+#      i: 1
+#      i_clamp: 1
+#    arm3_joint:
+#      p: 100
+#      d: 1
+#      i: 1
+#      i_clamp: 1
+#gripper_controller:
+#  type: effort_controllers/JointTrajectoryController
+#  joints:
+#    - finger1_joint
+#    - finger2_joint
+#  gains:
+#    finger1_joint:
+#      p: 100
+#      d: 1
+#      i: 1
+#      i_clamp: 1
+#    finger2_joint:
+#      p: 100
+#      d: 1
+#      i: 1
+#      i_clamp: 1

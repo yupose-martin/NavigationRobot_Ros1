@@ -3,8 +3,7 @@ controller_list:
   - name: car2_sld/arm_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
-    # default: true
-    default: false
+    default: true
     joints:
       - arm1_joint
       - arm2_joint
@@ -13,8 +12,7 @@ controller_list:
   - name: car2_sld/gripper_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
-    # default: true
-    default: false
+    default: true
     joints:
       - finger1_joint
       - finger2_joint
