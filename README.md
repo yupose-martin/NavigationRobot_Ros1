@@ -71,29 +71,3 @@ ros1-navigation robot as project in ROS class
 
 * py里面pub cmd_vel时，需要xyz xyz都给值才能够pub
 
-
-
-## 使用git
-
-#### 开始使用git
-
-- sudo apt install git
-- git config --global user.name "用户名"
-- git config --global user.email "电子邮件地址"
-- git clone -b master https://github.com/yupose-martin/navigationRobot_ros1.git
-- 现在已经有了rmc_ws文件夹
-- cd rmc_ws && catkin_make
-- 应该就可以使用了
-
-#### 怎样上传
-
-- (在路径～/rmc_ws/进行操作)
-- git pull (从远程repository更新自己的文件，一般先pull)
-- git add . (将自己更新的文件全部加入这个池子)
-- git commit -a -m "你对于此次更新想要说的话" （-a 是all -m 是message 在“”里面写入你想要写的信息）（将池子commit）
-- git push (push到远程的repository中)
-
-#### 怎样查看commit的更改增减
-
-- git log （可以看到commit记录，附带一个hash码）
-- git show 哈希码 （可以清晰的看到该次commit的+ - ）
